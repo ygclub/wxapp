@@ -1,0 +1,55 @@
+<!--calculator.wxml-->
+<view class="calculator">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section calcu-money clearfix">
+        <label class="fl">总金额</label>
+        <view class="section-input fr clearfix">
+          <label class="fr">元</label>
+          <input class=""
+                 name="money"
+                 id="money"
+                 type="digit" 
+                 bindinput="bindconfirm"
+                 placeholder="金额" auto-focus/>
+        </view>
+    </view>
+    <view class="section calcu-school  clearfix">
+        <label class="fl">总人数</label>
+        <view class="section-input fr clearfix">
+          <label class="fr">人</label>
+          <input class="" 
+                 id="allpeople"
+                 name = "allpeople"
+                 type="number" 
+                 bindinput="bindconfirm"
+                 placeholder="人数"/>
+        </view>
+    </view>
+    <view class="section calcu-student  clearfix">
+       <label class="fl">学生人数</label>
+        <view class="section-input fr clearfix">
+          <label class="fr">人</label>
+          <input class=""
+                 name ="student" 
+                 type="number" 
+                 bindinput="bindconfirm"
+                 placeholder="人数"/>
+        </view>
+    </view>
+    <view class="calcu-result" hidden="{{result}}">
+      <view class="calcu-result-all calcu-result-item clearfix">
+          <text class="fl title">非学生应付：</text>
+          <text class="fl money">￥:{{money.people}}</text>
+      </view>
+      <view class="calcu-result-student calcu-result-item clearfix">
+          <text class="fl title">学生应付：</text>
+          <text class="fl money">￥:{{money.student}}</text>
+      </view>
+    </view>
+    <view class="submit">
+      <button 
+        class="{{sumbitStyle.style}}"
+        formType="{{sumbitStyle.type}}">{{sumbitStyle.title}}</button>
+    </view>
+  </form>
+</view>

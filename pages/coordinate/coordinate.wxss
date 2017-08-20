@@ -1,0 +1,49 @@
+/**index.wxss**/
+
+.coordinate{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rbga(53,53,53,0.04)
+}
+.coordinate-school{
+  max-height: 285rpx;
+  overflow-y: scroll;
+  width: 100%;
+}
+.coordinate-school>.coordinate-school-item{
+  height: 25rpx;
+  line-height: 25rpx; 
+  padding:35rpx 0 35rpx 0;
+  margin-left: 30rpx;
+  margin-right: 32rpx;
+  border-bottom: 2rpx solid #ededed;
+}
+
+.coordinate-school-item> .school{
+  font-size:26rpx;
+  color:#353535;
+  letter-spacing:0;
+  text-align:left;
+  margin-right: 21rpx;
+}
+.coordinate-school-item> .address{
+  font-size:22rpx;
+  color:#999999;
+  letter-spacing:0;
+  text-align:left;
+}
+.coordinate-school-item> .distance{
+  font-size:18rpx;
+  color:#666666;
+  letter-spacing:0;
+  text-align:right;
+}
+.map{
+  width: 100%;
+}
+#myMap{
+  width: 100%；
+}

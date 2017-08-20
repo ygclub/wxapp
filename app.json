@@ -1,12 +1,38 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/calculator/calculator",
+    "pages/afterClass/afterClass",
+    "pages/schedule/schedule",
+    "pages/coordinate/coordinate"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarBackgroundColor": "#477926",
+    "navigationBarTitleText": "LEAD阳光",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "image/home-tab.png",
+        "selectedIconPath":"image/home-tab.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "image/my-tab.png",
+        "selectedIconPath": "image/my-tab.png",
+        "text": "日志"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }  
