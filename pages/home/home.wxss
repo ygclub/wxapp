@@ -8,8 +8,12 @@
   right: 0;
   background-color: #f7f7f7;
 }
-.home>.home-img{
-  height: 31.48148148148148%;
+.home>swiper{
+  height: 340rpx;
+  width: 100%;
+}
+.home .home-img{
+ height: 340rpx;
   width: 100%;
 }
 .home>.home-message{

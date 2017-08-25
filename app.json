@@ -1,12 +1,13 @@
 {
   "pages":[
+    "pages/logs/logs",
     "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/calculator/calculator",
     "pages/afterClass/afterClass",
     "pages/schedule/schedule",
-    "pages/coordinate/coordinate"
+    "pages/coordinate/coordinate",
+    "pages/about/about"
   ],
   "window":{
     "backgroundTextStyle":"light",

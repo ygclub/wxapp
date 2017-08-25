@@ -1,6 +1,17 @@
 <!--home.wxml-->
 <view class="w home">
-  <image class="home-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503034001137&di=c7f4e04a7c64c72e70060480777f7faf&imgtype=0&src=http%3A%2F%2Fimg10.360buyimg.com%2Fyixun_zdm%2Fjfs%2Ft2833%2F13%2F2741351291%2F309485%2Fb697a12b%2F57722910N9d84160c.jpg"></image>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  indicator-color
+  indicator-active-color="#fff"
+  circular="{{circular}}"
+  interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+        <swiper-item>
+      <image src="{{item}}" class="home-img slide-image"/>
+    </swiper-item>
+    </block>
+  </swiper>
   <view class="home-message">
     <view class="clearfix">
       <text class="title fl">[阳光快报]</text>

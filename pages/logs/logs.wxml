@@ -1,4 +1,25 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  我的
+<view class="my-home">
+    <view class="item  user clearfix">
+      <image class="fl" src="{{imgSrc}}"></image>
+      <text class="fl">阳光大家庭</text>
+    </view>
+    <view class="item  list">
+      <view class="list-first clearfix">
+         <image class="fl" src="../../image/my-tab.png"></image>
+        <text class="fl">我发起的课后十分钟</text>
+        <image class="fr" src="../../image/my-tab.png"></image>
+      </view>
+    </view>
+    <view class="item  list marb clearfix">
+      <image class="fl" src="../../image/my-tab.png"></image>
+      <text class="fl">我参与的课程</text>
+      <image class="fr" src="../../image/my-tab.png"></image>
+    </view>
+    <view class="item about clearfix"
+          bindtap="toPage"
+          data-id="0">
+      <text class="fl">关于阳光</text>
+      <image class="fr" src="../../image/my-tab.png"></image>
+    </view>
 </view>

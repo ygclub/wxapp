@@ -30,9 +30,6 @@ Page({
     ]
   },
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '小伙伴AA'
-    })
     this.setData({
       sumbitStyle : this.data.sumbitData[0]
     })
