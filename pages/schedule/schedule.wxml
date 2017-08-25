@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="container">
-  课程表
+  <input placeholder="搜索"  class="search_input" placeholder-class="search_placehold_class"/>
 </view>
