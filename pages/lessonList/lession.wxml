@@ -1,0 +1,21 @@
+<view class="lession">
+ <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" 
+       data-index="{{index}}" 
+       bindtouchstart="touchstart" 
+       bindtouchmove="touchmove" 
+       wx:for="{{items}}"
+       wx:key="">
+  <view class="content">
+    <view class="lesson-list clearfix">
+        <image src="../../image/after-class-icon.png"></image>
+        <view class="lesson-list-text">
+            <text class="className">语文</text>
+            <text class="classCount">2017年春季第xxx次／ji 累累</text>
+            <text class="classAddress">定福小学</text>
+            <text class="classTime">上课时间：6月23日 09:20 - 12:00</text>
+        </view>
+    </view>
+  </view>
+  <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+ </view>
+</view>

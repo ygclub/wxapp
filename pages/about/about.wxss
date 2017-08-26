@@ -1,21 +1,24 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.about-lead{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  padding-bottom: 100rpx;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.about-lead .title{
+  font-size:34rpx;
+  color:#353535;
+  letter-spacing:0;
+  text-align:center;
+  margin-bottom: 67rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.about-lead .content{
+  font-size:26rpx;
+  color:#353535;
+  letter-spacing:0;
+  line-height:46rpx;
+  text-align:justify;
+  text-justify:distribute-all-lines；
 }
-
-.usermotto {
-  margin-top: 200px;
+.about-lead .content .other{
+  color: #888;
 }

@@ -1,11 +1,44 @@
 /**index.wxss**/
-view{
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
+.schedule{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  background: #fff;
 }
-
+.schedule .touche-box{
+  height: 88rpx;
+  border:1px solid #e6e6ea;
+  border-radius:10rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+}
+.schedule .no-touched{
+  
+}
+.schedule .touched{
+  
+}
+.schedule .no-touched .no-touched-input{
+  width: 88rpx;
+  margin: 10rpx auto;
+  height: 30rpx;
+  vertical-align: middle;
+  padding-top:  7rpx;
+}
+.no-touched-input image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 9rpx;
+  float: left;
+}
+.no-touched-input text{
+  font-size:26rpx;
+  color:#b2b2b2;
+  letter-spacing:0.28rpx;
+  float: left;
+  text-align:center;
+}
 .search_input{
   background:#ffffff;
   border:1px solid #e6e6ea;
@@ -14,10 +47,12 @@ justify-content: center;
   margin-left: 10px;
   margin-right: 10px;
   width: 100%;
-  height:40px;
+  height:57rpx;
+  line-height: 57rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 .search_placehold_class{
-
   font-size:20px;
   color:#b2b2b2;
   letter-spacing:0.28px;

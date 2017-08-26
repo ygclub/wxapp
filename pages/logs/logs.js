@@ -17,12 +17,12 @@ Page({
         break;
       case 1:
         wx.navigateTo({
-          url: '../../pages/coordinate/coordinate'
+          url: '../../pages/lessonList/lession?type=1'
         })
         break;
       case 2:
         wx.navigateTo({
-          url: '../../pages/calculator/calculator'
+          url: '../../pages/lessonList/lession?type=2'
         })
         break;
       default: break;

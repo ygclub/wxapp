@@ -5,13 +5,17 @@
       <text class="fl">阳光大家庭</text>
     </view>
     <view class="item  list">
-      <view class="list-first clearfix">
+      <view class="list-first clearfix"
+           bindtap="toPage"
+           data-id="2">
          <image class="fl" src="../../image/my-tab.png"></image>
         <text class="fl">我发起的课后十分钟</text>
         <image class="fr" src="../../image/my-tab.png"></image>
       </view>
     </view>
-    <view class="item  list marb clearfix">
+    <view class="item  list marb clearfix"
+          bindtap="toPage"
+          data-id="1">
       <image class="fl" src="../../image/my-tab.png"></image>
       <text class="fl">我参与的课程</text>
       <image class="fr" src="../../image/my-tab.png"></image>

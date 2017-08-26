@@ -18,3 +18,45 @@
 .clearfix:after {
   clear: both;
 }
+
+
+
+
+.lesson-list{
+   position: relative;
+   border-bottom:1rpx solid #ccc;
+   height: 200rpx;
+   width: 100%;
+   overflow: hidden;
+}
+.lesson-list >image{
+  width: 160rpx;
+  height: 180rpx;
+  border-radius: 6rpx;
+  position: absolute;
+}
+.lesson-list .lesson-list-text{
+  float: left;
+  margin-left: 200rpx;
+}
+.lesson-list .lesson-list-text>text{
+  display: block;
+  letter-spacing:0;
+  text-align:left;
+}
+.lesson-list-text>.className{
+  font-size:30rpx;
+  color:#353535;
+}
+.lesson-list-text>.classCount{
+  font-size:26rpx;
+  color:#666666;
+}
+.lesson-list-text>.classAddress{
+  font-size:22rpx;
+  color:#929292;
+}
+.lesson-list-text>.classTime{
+  font-size:22rpx;
+  color:#353535;
+}

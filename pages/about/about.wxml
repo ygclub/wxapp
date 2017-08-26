@@ -1,4 +1,12 @@
 <!--index.wxml-->
-<view class="container">
-   关于阳光
+<view class="container about-lead">
+   <view class="title">北京(LEAD)阳光志愿者俱乐部简介</view>
+  <text class="content">北京(LEAD)阳光志愿者俱乐部（简称LEAD阳光）是一个独立运作、专注于为流动儿童教育提供志愿教育机会的纯“草根”志愿者组织。阳光志愿者成立于2003年6月1日，主要利用互联网的广泛联络功能和口口相传的宣传形式，以明确的宗旨——“让教育实现梦想(Let Education Achieve Dreams)”及“身体力行”的公益行动吸引有意愿的年青人主动靠拢，使社会个体的零散资源聚集在一起。再通过“周末课堂”的形式，组织志愿者为北京城区打工子弟学校的孩子提供英语、计算机、艺术、科普、国学启蒙、趣味经济等课外兴趣课。
+俱乐部在开展志愿活动的同时，也积极开展志愿者内部交流活动，努力为每一位阳光志愿者创造一个平等交流、分享成长的温暖空间！
+
+<text class="other">注：阳光志愿者是一个无任何背景、无专职人员、无资金来源的纯草根组织，成员在认同组织宗旨的基础上，以自愿加民主的方式决定内部大小事务，参与活动中产生的费用均由志愿者自己承担，俱乐部运营所需的基本费用主要由个人捐助。</text>   
+
+LEAD is purely a “grassroots” organization formed and survival based on the internet society. It was formed in 2003, aiming at vulnerable children educational resource fairness, that where LEAD – Let education achieve dreams – comes from. The members are  mainly the youths come from lower middle class, including “white collar”, university students, self-employed, etc. With the accumulated time and resources from each of members, we provide the mobile children in the pre-agreed non-government schools series of weekend classes in English, Traditional Chinese Culture, math, astronomy, scientific experiment, etc. according to the need and availability.
+
+In LEAD, there is no full time member, no capital involvement, no relied government or half-government department or other NGO, fully independent operation.</text>
 </view>

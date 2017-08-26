@@ -1,11 +1,12 @@
 {
   "pages":[
     "pages/logs/logs",
+    "pages/lessonList/lession",
+    "pages/schedule/schedule",
     "pages/home/home",
     "pages/index/index",
     "pages/calculator/calculator",
     "pages/afterClass/afterClass",
-    "pages/schedule/schedule",
     "pages/coordinate/coordinate",
     "pages/about/about"
   ],
