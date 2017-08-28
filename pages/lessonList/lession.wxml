@@ -5,7 +5,7 @@
        bindtouchmove="touchmove" 
        wx:for="{{items}}"
        wx:key="">
-  <view class="content">
+  <view class="content school-list">
     <view class="lesson-list clearfix">
         <image src="../../image/after-class-icon.png"></image>
         <view class="lesson-list-text">

@@ -21,7 +21,18 @@
 
 
 
-
+.school-list{
+  width: 100%;
+  padding: 10px;
+  line-height: 22px;
+  margin-right:0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+  background: #fff;
+}
 .lesson-list{
    position: relative;
    border-bottom:1rpx solid #ccc;

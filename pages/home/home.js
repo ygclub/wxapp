@@ -38,8 +38,6 @@ Page({
   },
   //事件处理函数
   toModule:function(e){
-    console.log(e.target.dataset.tab);
-    console.log(e);
     switch (parseInt(e.target.dataset.tab)) {
       case 0: 
         wx.navigateTo({

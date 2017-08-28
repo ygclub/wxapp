@@ -7,23 +7,30 @@
   background: #fff;
 }
 .schedule .touche-box{
-  height: 88rpx;
+  
+}
+
+.schedule .no-touched{
   border:1px solid #e6e6ea;
   border-radius:10rpx;
+  height: 57rpx;
+  margin-top: 13rpx;
   margin-left: 16rpx;
   margin-right: 16rpx;
 }
-.schedule .no-touched{
-  
-}
 .schedule .touched{
-  
+  background:#f0eff5;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  padding-top: 13rpx;
+  height: 75rpx;
+  line-height: 55rpx;
+  position: relative;
 }
 .schedule .no-touched .no-touched-input{
   width: 88rpx;
   margin: 10rpx auto;
   height: 30rpx;
-  vertical-align: middle;
   padding-top:  7rpx;
 }
 .no-touched-input image{
@@ -38,24 +45,77 @@
   letter-spacing:0.28rpx;
   float: left;
   text-align:center;
+  line-height: 30rpx;
 }
-.search_input{
+.touche-input {
+  position: absolute;
+  height: 55rpx;
+  left: 16rpx;
+  right: 100rpx;
+}
+.touche-input >image{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.touche-input >.search{
+  width:25rpx;
+  height:26rpx;
+  left: 16rpx;
+}
+.touche-input >.del{
+  width: 30rpx;
+  height: 30rpx;
+  right: 21rpx;
+}
+.touche-input >input{
   background:#ffffff;
   border:1px solid #e6e6ea;
-  border-radius:10px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 100%;
-  height:57rpx;
-  line-height: 57rpx;
-  padding-left: 30rpx;
-  padding-right: 30rpx;
-}
-.search_placehold_class{
-  font-size:20px;
+  border-radius:10rpx;
+  height:55rpx;
+  padding-left: 51rpx;
+  font-size:26rpx;
   color:#b2b2b2;
-  letter-spacing:0.28px;
-  text-align:center;
 }
+.touche-input .input-canel{
+  color: #00c302;
+  font-size:32rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ .schedule-filter{
+   display: flex;
+   height: 96rpx;
+   line-height: 96rpx;
+   font-size:26rpx;
+   color:#353535;
+ }
+ .schedule-filter >view{
+  flex: 1;
+  text-align: center;
+  position: relative;
+ }
+  .schedule-filter .filter-list{
+    position: absolute;
+    background: #fff;
+    top: 70rpx;
+    z-index: 999;
+    left: 20rpx;
+    right: 20rpx;
+  }
+ .schedule-filter .filter-list>view{
+    line-height: 50rpx;
+    height: 50rpx;
+    text-align: center;
+    border-left: 1rpx solid #e8e8e8;
+    border-right: 1rpx solid #e8e8e8;
+    border-bottom: 1rpx solid #e8e8e8;
+ }
+ .schedule-filter .filter-list>view:first-child{
+   border-top: 1rpx solid #e8e8e8;
+ }
+ 
+
 

@@ -1,8 +1,8 @@
 {
   "pages":[
-    "pages/logs/logs",
-    "pages/lessonList/lession",
     "pages/schedule/schedule",
+    "pages/logs/logs",
+    "pages/lessonList/lession",  
     "pages/home/home",
     "pages/index/index",
     "pages/calculator/calculator",

@@ -107,10 +107,11 @@ Page({
       }
       if (money && people) 
       {
+        var n = parseInt(people)-parseInt(student)+student/2;
         this.setData({
           money: {
-            people: Math.ceil(money / (parseInt(people) + student / 2)),
-            student: Math.ceil(money / (parseInt(people) + student / 2)) / 2
+            people: Math.ceil(money / n),
+            student: Math.ceil(money / n) / 2
           },
           sumbitStyle: this.data.sumbitData[2],
           result: false
