@@ -1,0 +1,36 @@
+<!--pages/produce/produce.wxml-->
+
+<view class="produce">
+  <view class="produce-item">
+    <view class="school clearfix">
+      <view class="school-image fl">
+        <image src="../../image/after-class-icon.png"></image>
+      </view>
+      <view class="school-info fl">
+        <view class="info-shcool">五道口</view>
+        <view class="info-class">计算机、舞蹈课、语文课、英语课</view>
+        <view class="info-time">周日 09：30上课</view>
+      </view>
+    </view>
+    <view class="button clearfix">
+      <view class="button-toSchool button-toAggregate {{active=='1'? 'active' : ''}}"
+            data-type="1"
+            bindtap="toSchool">前往项目点</view>
+      <view class="button-toSchool button-toProduce {{active=='2'? 'active' : ''}}"
+            data-type="2"
+            bindtap="toSchool">前往集合点</view>
+    </view>
+  </view>
+  <map id="map" 
+       scale="11"
+       longitude="{{longitude}}"
+       latitude="{{latitude}}"
+       controls="{{controls}}"
+       bindcontroltap="controltap" 
+       markers="{{markers}}" 
+       bindmarkertap="markertap" 
+       polyline="{{polyline}}" 
+       bindregionchange="regionchange" 
+       show-location
+       style="top:305rpx;width: 100%; height: 100%;"></map>
+</view>

@@ -6,7 +6,8 @@
   indicator-active-color="#fff"
   circular="{{circular}}"
   interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}"
+           wx:key='' >
         <swiper-item>
       <image src="{{item}}" class="home-img slide-image"/>
     </swiper-item>
@@ -22,6 +23,7 @@
     <view class="home-module-item" 
           wx:for="{{hometab}}" 
           wx:for-index="idx"
+          wx:key=""
           wx:for-item="itemHometab"
           bindtap="toModule"
           data-tab="{{itemHometab.toPage}}">

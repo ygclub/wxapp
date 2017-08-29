@@ -8,41 +8,41 @@ Page({
   data: {
     listDatas:[
       {
-        schoolname:"定福小学",
+        schoolname:"昌平西二旗",
         address:"北京市昌平区东小口镇葫芦村",
-        id:"",
+        id:"1",
         dis:"7.8km"
       },
       {
-        schoolname: "朱房村社区中心",
+        schoolname: "上地",
         address: "北京市昌平区东小口镇芦村",
-        id: "",
+        id: "2",
         dis: "400m"
       },
       {
-        schoolname: "育才学校",
+        schoolname: "望京",
         address: "北京市昌平区东小口镇芦村",
-        id: "",
+        id: "4",
         dis: "12.6km"
       },
        {
-        schoolname: "东坝社区中心",
+        schoolname: "国贸",
         address: "北京市朝阳区东坝社区中心",
-        id: "",
+        id: "3",
         dis: "12.6km"
       }
     ],
     markers: [
       {
         iconPath: "/def-img/race-info-time.svg",
-        id: 0,
+        id: 1,
         latitude: 40.0104100000, 
         longitude: 116.3503500000,
         width: 15,
         height: 20,
-        title: "彩云天气",
+        title: "五道口",
         callout: { 
-          content:"彩云天气",
+          content:"五道口",
           borderRadius:5,
           bgColor:"#ccc", 
           padding:5,
@@ -51,14 +51,14 @@ Page({
       },
       {
         iconPath: "/def-img/race-info-time.svg",
-        id: 1,
+        id: 2,
         latitude: 40.1060400000,
         longitude: 116.2669400000,
         width: 15,
         height: 20,
-        title:"定福小学",
+        title:"昌平西二旗",
         callout: {
-          content: "定福小学",
+          content: "昌平西二旗",
           borderRadius: 5,
           bgColor: "#ccc",
           padding: 5,
@@ -67,7 +67,7 @@ Page({
       },
       {
         iconPath: "/def-img/race-info-time.svg",
-        id: 2,
+        id: 3,
         latitude: 39.9961200000,
         longitude: 116.4808500000,
         width: 15,
@@ -162,27 +162,15 @@ Page({
       }
     })
   },
-  toSchool:function(e){
-    console.log(e);
-    qqmapsdk.search({
-      keyword: '酒店',
-      region: "北京",
-      success: function (res) {
-        console.log(121);
-        cosole.log(11);
-        console.log(res);
-      },
-      fail: function (res) {
-        console.log(122);
-        cosole.log(12);
-        console.log(res);
-      },
-      complete: function (res) {
-        cosole.log(13);
-        console.log(131);
-        console.log(res);
-      }
+  toModule:function(e){
+    var id = e.markerId;
+    if(!id){
+      id = e.target.dataset.tab;
+    }
+    console.log(id);
+    wx.navigateTo({
+      url: '../../pages/produce/produce?data='+id
     })
-    console.log(qqmapsdk);
+    
   }
 })

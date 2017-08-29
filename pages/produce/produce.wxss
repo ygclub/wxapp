@@ -1,0 +1,73 @@
+/* pages/produce/produce.wxss */
+.produce{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.produce-item{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 305rpx;
+  background: #fff;
+  z-index: 999999；
+}
+.produce-item .school{
+  height: 177rpx;
+  width: 100%;
+  padding-top: 34rpx;
+}
+.produce-item .button{
+  height: 94rpx;
+  width: 100%;
+  border-top: 1rpx solid #ccc;
+}
+.produce-item .school-image>image{
+  background:#d8d8d8;
+  border-radius:6rpx;
+  width:140rpx;
+  height:148rpx;
+  margin-left: 30rpx;
+}
+.produce-item .school-info {
+  letter-spacing:0;
+  text-align:left;
+  margin-left: 37rpx;
+}
+.produce-item .school-info >.info-shcool{
+  font-size:32rpx;
+  color:#353535;
+  margin-bottom: 21rpx;
+  margin-top: 8rpx;
+}
+.produce-item .school-info >.info-class{
+  font-size:26rpx;
+  color:#666666;
+  margin-bottom: 21rpx;
+}
+.produce-item .school-info >.info-time{
+  font-size:26rpx;
+  color:#353535;
+}
+.produce-item .button-toSchool{
+  font-size:26rpx;
+  color:#457625;
+  letter-spacing:0;
+  text-align:center;
+  line-height: 94rpx;
+  width:232rpx;
+  height:94rpx;
+  float: right;
+}
+.produce-item .button-toSchool.active{
+  background:#fafafa;
+}
+.produce-item .button-toProduce{
+
+}
+.produce-item .button-toAggregate{
+
+}
