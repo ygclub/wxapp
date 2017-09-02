@@ -119,7 +119,7 @@ Page({
           avg = avg - floatAvg * 0.1 + 1;
         }
         console.log(floatAvg + " - " + avg);
-        var studentAvg = (avg/2).toFixed(1);
+        var studentAvg = student == 0 ? 0 :(avg/2).toFixed(1);
         var floatStdAvg = parseInt( studentAvg * 10 % 10);
         console.log(floatStdAvg);
         if (floatStdAvg <= 3) {
@@ -130,7 +130,7 @@ Page({
           studentAvg = studentAvg - floatStdAvg * 0.1 + 1;
         }
         console.log(floatStdAvg + " - " + studentAvg);
-
+ 
         this.setData({
           money: {
             people: avg.toFixed(2),
