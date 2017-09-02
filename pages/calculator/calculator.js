@@ -108,15 +108,22 @@ Page({
       if (money && people) 
       {
         var n = parseInt(people)-parseInt(student)+student/2;
-        var avg = (money/n).toFixed(1);
+        var avg = (parseFloat(money)/n).toFixed(1);
         var floatAvg = parseInt( avg * 10 % 10);
-        
-        if(floatAvg <= 3){
-          avg = avg - floatAvg * 0.1;
-        }else if(floatAvg == 5 || floatAvg > 3){
-          avg = avg - floatAvg * 0.1 + 0.5;
+        if(parseInt(avg) >= 1){
+          if(floatAvg <= 3){
+            avg = avg - floatAvg * 0.1;
+          }else if(floatAvg == 5 || floatAvg > 3){
+            avg = avg - floatAvg * 0.1 + 0.5;
+          }else{
+            avg = avg - floatAvg * 0.1 + 1;
+          }
         }else{
-          avg = avg - floatAvg * 0.1 + 1;
+          if (floatAvg >= 5) {
+            avg = 1;
+          } else {
+            avg = 0.5;
+          }
         }
         console.log(floatAvg + " - " + avg);
         var studentAvg = student == 0 ? 0 :(avg/2).toFixed(1);
