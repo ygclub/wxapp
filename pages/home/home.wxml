@@ -1,5 +1,5 @@
 <!--home.wxml-->
-<view class="w home">
+<view class="home" >
   <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}"
   indicator-color
