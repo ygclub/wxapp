@@ -1,5 +1,4 @@
 //index.js
-
 //获取应用实例
 Page({
   data: { 
@@ -78,6 +77,34 @@ Page({
       lessonFilter: {title:"全部课程",id:0},
       intelligenFilter: this.data.intelligenData[0],
     })
+
+    //query schedule  by default
+    wx.request({
+      url: getApp().data.urlDomain +'/v1/query_class_schedule',
+      method:"post",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: json2Form({"school":"all","course":"all","keyword":"none","sort":-1}),
+      success:function(res){
+
+        var schedules = res.data.result.schedule;
+        var resArray = []
+        for(var i = 0; i < schedules.length; i++){
+
+          var item = schedules[i];
+          item.image = getApp().data.urlDomain+item.image;
+          resArray.push(item);
+        }
+        that.setData({
+
+          schedule_list: resArray
+
+        });
+
+      }
+    })
+
   },
   filterList:function(e){
     console.log(e)
@@ -149,3 +176,10 @@ Page({
      })
    }
 })
+function json2Form(json) {
+  var str = [];
+  for (var p in json) {
+    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));
+  }
+  return str.join("&");
+}
