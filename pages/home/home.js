@@ -63,6 +63,26 @@ Page({
 } 
   },
   onLoad: function () {
-     
+     var that = this;
+     //request news
+     wx.request({
+       url: 'https://squirrelrao.com/v1/news',
+       success:function(res){
+        console.log(res.data);
+        var newsArray = res.data.result.news
+        var newRes = []
+        for(var i = 0; i < newsArray.length; i++){
+          var content = newsArray[i].content;
+          var item = {url:"#",news:content};
+          newRes.push(item);
+       }
+       that.setData({
+         newList: newRes
+       });
+     }
+       
+     })
+
+     //request banners
   }
 })
