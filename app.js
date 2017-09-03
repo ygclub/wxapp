@@ -2,7 +2,8 @@
 
 App({
   data:{
-      user:null
+      user:null,
+      urlDomain:"https://squirrelrao.com/"
   },
   onLoad: function () {
     // 实例化API核心类
