@@ -108,10 +108,40 @@ Page({
       if (money && people) 
       {
         var n = parseInt(people)-parseInt(student)+student/2;
+        var avg = (parseFloat(money)/n).toFixed(1);
+        var floatAvg = parseInt( avg * 10 % 10);
+        if(parseInt(avg) >= 1){
+          if(floatAvg <= 3){
+            avg = avg - floatAvg * 0.1;
+          }else if(floatAvg == 5 || floatAvg > 3){
+            avg = avg - floatAvg * 0.1 + 0.5;
+          }else{
+            avg = avg - floatAvg * 0.1 + 1;
+          }
+        }else{
+          if (floatAvg >= 5) {
+            avg = 1;
+          } else {
+            avg = 0.5;
+          }
+        }
+        console.log(floatAvg + " - " + avg);
+        var studentAvg = student == 0 ? 0 :(avg/2).toFixed(1);
+        var floatStdAvg = parseInt( studentAvg * 10 % 10);
+        console.log(floatStdAvg);
+        if (floatStdAvg <= 3) {
+          studentAvg = studentAvg - floatStdAvg * 0.1;
+        } else if (floatStdAvg == 5 || floatStdAvg > 3) {
+          studentAvg = studentAvg - floatStdAvg * 0.1 + 0.5;
+        } else {
+          studentAvg = studentAvg - floatStdAvg * 0.1 + 1;
+        }
+        console.log(floatStdAvg + " - " + studentAvg);
+ 
         this.setData({
           money: {
-            people: Math.ceil(money / n),
-            student: Math.ceil(money / n) / 2
+            people: avg.toFixed(2),
+            student: studentAvg.toFixed(2)
           },
           sumbitStyle: this.data.sumbitData[2],
           result: false

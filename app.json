@@ -18,6 +18,9 @@
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
+    "selectedColor": "#fe6700",
+    "color":"#535353",
+    "borderStyle":"white",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -29,7 +32,7 @@
         "pagePath": "pages/logs/logs",
         "iconPath": "image/my-tab.png",
         "selectedIconPath": "image/my-tab-active.png",
-        "text": "日志"
+        "text": "我的"
       }
     ]
   },

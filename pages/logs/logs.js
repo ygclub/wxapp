@@ -6,6 +6,12 @@ Page({
   },
   onLoad: function () {
     
+    var user = getApp().data.user;
+    this.setData({
+      user_nickname: user.nickName,
+      user_avatar: user.avatarUrl
+      
+    });
   },
   toPage:function(e){
     console.log(e);

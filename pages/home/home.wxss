@@ -1,4 +1,4 @@
-.home{
+concontent .content{
   width: 100%;
   height: 100%;
   position: fixed;
@@ -6,8 +6,27 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #f7f7f7;
 }
+.home{
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  background:#f7f7f7;
+}
+
+.swiper_container {
+  height: 55rpx;
+  width: 80vw;
+}
+
+.swiper_item {
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
 .home>swiper{
   height: 340rpx;
   width: 100%;
@@ -24,11 +43,14 @@
 }
 .home>.home-message .title{
   color:#477926;
-  width: 110rpx;
-  margin-right: 30rpx;
+  width: auto;
+  margin-right:10rpx;
+  font-weight: bold;
 }
 .home>.home-message .content{
   color:#fe6700;
+  font-weight: bold;
+
 }
 .home>.home-module{
     left: 0;

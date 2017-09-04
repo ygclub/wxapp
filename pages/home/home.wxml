@@ -1,5 +1,5 @@
 <!--home.wxml-->
-<view class="w home">
+<view class="home" >
   <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}"
   indicator-color
@@ -14,10 +14,18 @@
     </block>
   </swiper>
   <view class="home-message">
-    <view class="clearfix">
-      <text class="title fl">[阳光快报]</text>
-      <text class="content fl">#阳光十四周年庆#【活动花絮】最后一个关卡未读！</text>
-    </view>
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2700">
+  <block wx:for="{{newList}}">
+       <navigator url="#" open-type="navigate">
+         <swiper-item>
+          <view class="clearfix">
+            <text class="title fl">[阳光快报]</text>
+            <text class="content fl">#{{item.news}}</text>
+             </view>
+         </swiper-item>
+       </navigator>
+     </block>
+</swiper>
   </view>
   <view class="home-module">
     <view class="home-module-item" 

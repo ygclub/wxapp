@@ -1,8 +1,8 @@
 <!--logs.wxml-->
 <view class="my-home">
     <view class="item  user clearfix">
-      <image class="fl" src="{{imgSrc}}"></image>
-      <text class="fl">阳光大家庭</text>
+      <image class="fl"  src="{{user_avatar}}"></image>
+      <text class="fl">{{user_nickname}}</text>
     </view>
     <view class="item  list">
       <view class="list-first clearfix"
@@ -24,6 +24,12 @@
           bindtap="toPage"
           data-id="0">
       <text class="fl">关于阳光</text>
+      <image class="fr" src="../../image/my-tab.png"></image>
+    </view>
+    <view class="item about clearfix"
+          bindtap="toPage"
+          data-id="0">
+      <text class="fl">关于小程序</text>
       <image class="fr" src="../../image/my-tab.png"></image>
     </view>
 </view>

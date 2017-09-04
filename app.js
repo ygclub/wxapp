@@ -1,23 +1,24 @@
 //app.js
 
 App({
+  data:{
+      user:null,
+      urlDomain:"https://squirrelrao.com/"
+  },
   onLoad: function () {
     // 实例化API核心类
   },
+
   onLaunch: function () {
+    var that = this;
+
     wx.login({
       success: function (res) {
-        if (res.code) {
-          //发起网络请求
-          wx.request({
-            url: 'https://test.com/onLogin',
-            data: {
-              code: res.code
-            }
-          })
-        } else {
-          console.log('获取用户登录态失败！' + res.errMsg)
-        }
+        wx.getUserInfo({
+          success: function (res) {
+            that.data.user = res.userInfo
+          }
+        })
       }
     });
   }

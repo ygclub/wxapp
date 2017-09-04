@@ -64,14 +64,16 @@
     </view>
   </view>
   <view class="school-list">
-    <view class="lesson-list clearfix">
-        <image src="../../image/after-class-icon.png"></image>
+    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower">
+    <view class="lesson-list clearfix" wx:for="{{schedule_list}}">
+        <image src="{{item.image}}"></image>
         <view class="lesson-list-text">
-            <text class="className">语文</text>
-            <text class="classCount">2017年春季第xxx次／ji 累累</text>
-            <text class="classAddress">定福小学</text>
-            <text class="classTime">上课时间：6月23日 09:20 - 12:00</text>
+            <text class="className">{{item.course}}</text>
+            <text class="classCount">{{item.semester}}第{{item.class_number}}次/{{item.teacher}}</text>
+            <text class="classAddress">{{item.school}}</text>
+            <text class="classTime">上课时间：{{item.date}} {{item.timerange}}</text>
         </view>
     </view>
+    </scroll-view>
   </view>
 </view>
