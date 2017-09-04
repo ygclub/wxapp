@@ -36,7 +36,7 @@
              bindtouchstart="lessonList"
              data-index="{{item}}"
              wx:for="{{schoolData}}"
-             wx:key="" class="classname">{{item.title}}</view>
+             wx:key="" class="{{item.classname}}">{{item.title}}</view>
         </view>
     <view class="classname">
       <text 
@@ -48,19 +48,19 @@
         <view data-index="{{item}}"
              bindtouchstart="lessonList"
              wx:for="{{lessonData}}"
-             wx:key="" class="classname">{{item.title}}</view>
+             wx:key="" class="{{item.classname}}">{{item.title}}</view>
       </view>
     <view class="classname">
       <text
          data-type="3"
           bindtouchstart="filterList">{{intelligenFilter.title}}</text> 
-  </view>
+      </view>
    <view class="filter-list"
          wx:if="{{intelligenFlag}}">
        <view data-index="{{item}}"
              bindtouchstart="lessonList"
              wx:for="{{intelligenData}}"
-             wx:key="" class="classname">{{item.title}}</view>
+             wx:key="" class="{{item.classname}}">{{item.title}}</view>
        </view>
     </view>
   <view class="school-list">

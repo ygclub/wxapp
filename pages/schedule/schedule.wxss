@@ -105,10 +105,18 @@
     left: 0rpx;
     right: 0rpx;
   }
- .schedule-filter .filter-list>view{
+
+
+.schedule-filter .filter-list view.choose{
+    color: #fe6700;
+ } 
+ .schedule-filter .filter-list view.default{
+    color: #353535;
+ } 
+  .schedule-filter .filter-list>view{
     line-height: 80rpx;
     height: 80rpx;
-    border-left: 0rpx solid #e8e8e8;
+    border-left: 1rpx solid #e8e8e8;
     border-right: 0rpx solid #e8e8e8;
     border-bottom: 1rpx solid #e8e8e8;
     text-align: left;
@@ -116,12 +124,11 @@
     color: #353535;
     font-weight: bold;
     font-size: 11pt;
-
  }
- .schedule-filter .filter-list>view:first-child{
+  .schedule-filter .filter-list>view:first-child{
    border-top: 0rpx solid #e8e8e8;
- }
-
+ } 
+ 
  .school-list .displaybg{
     position: fixed;
     top:0;
