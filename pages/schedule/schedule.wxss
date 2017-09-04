@@ -102,22 +102,24 @@
     background: #fff;
     top: 160rpx;
     z-index: 999;
-    left: 20rpx;
-    right: 20rpx;
+    left: 0rpx;
+    right: 0rpx;
   }
  .schedule-filter .filter-list>view{
-    line-height: 50rpx;
-    height: 50rpx;
-    border-left: 1rpx solid #e8e8e8;
-    border-right: 1rpx solid #e8e8e8;
+    line-height: 80rpx;
+    height: 80rpx;
+    border-left: 0rpx solid #e8e8e8;
+    border-right: 0rpx solid #e8e8e8;
     border-bottom: 1rpx solid #e8e8e8;
     text-align: left;
+    padding-left: 25rpx;
     color: #353535;
     font-weight: bold;
+    font-size: 11pt;
 
  }
  .schedule-filter .filter-list>view:first-child{
-   border-top: 1rpx solid #e8e8e8;
+   border-top: 0rpx solid #e8e8e8;
  }
  
 
