@@ -100,7 +100,7 @@
   .schedule-filter .filter-list{
     position: absolute;
     background: #fff;
-    top: 70rpx;
+    top: 160rpx;
     z-index: 999;
     left: 20rpx;
     right: 20rpx;
@@ -108,14 +108,16 @@
  .schedule-filter .filter-list>view{
     line-height: 50rpx;
     height: 50rpx;
-    text-align: center;
     border-left: 1rpx solid #e8e8e8;
     border-right: 1rpx solid #e8e8e8;
     border-bottom: 1rpx solid #e8e8e8;
+    text-align: left;
+    color: #353535;
+    font-weight: bold;
+
  }
  .schedule-filter .filter-list>view:first-child{
    border-top: 1rpx solid #e8e8e8;
  }
  
-
 

@@ -28,8 +28,9 @@
     <view class="classname">
         <text 
           data-type="1"
-          bindtouchstart="filterList">{{schoolFilter.title}}</text>  
-        <view class="filter-list"
+          bindtouchstart="filterList">{{schoolFilter.title}}</text> 
+      </view>
+      <view class="filter-list"
           wx:if="{{schoolFlag}}">
           <view 
              bindtouchstart="lessonList"
@@ -37,24 +38,24 @@
              wx:for="{{schoolData}}"
              wx:key="" class="classname">{{item.title}}</view>
         </view>
-      </view>
     <view class="classname">
       <text 
           data-type="2"
           bindtouchstart="filterList">{{lessonFilter.title}}</text>
-      <view class="filter-list"
+    </view>
+    <view class="filter-list"
         wx:if="{{lessonFlag}}">
         <view data-index="{{item}}"
              bindtouchstart="lessonList"
              wx:for="{{lessonData}}"
              wx:key="" class="classname">{{item.title}}</view>
       </view>
-    </view>
     <view class="classname">
       <text
          data-type="3"
           bindtouchstart="filterList">{{intelligenFilter.title}}</text> 
-      <view class="filter-list"
+  </view>
+   <view class="filter-list"
          wx:if="{{intelligenFlag}}">
        <view data-index="{{item}}"
              bindtouchstart="lessonList"
@@ -62,7 +63,6 @@
              wx:key="" class="classname">{{item.title}}</view>
        </view>
     </view>
-  </view>
   <view class="school-list">
     <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower">
     <view class="lesson-list clearfix" wx:for="{{schedule_list}}">
