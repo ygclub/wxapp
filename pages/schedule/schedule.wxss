@@ -121,5 +121,18 @@
  .schedule-filter .filter-list>view:first-child{
    border-top: 0rpx solid #e8e8e8;
  }
+
+ .school-list .displaybg{
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #353535;
+    opacity: 0.4;
+}
+.school-list .hidebg{
+    opacity: 0;
+}
  
 

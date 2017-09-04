@@ -29,6 +29,7 @@ Page({
     schoolFlag: false,
     lessonFlag: false,
     intelligenFlag: false,
+    bgdisplayclass: ".school-list .hidebg",
     dataType:1
   },
   //事件处理函数
@@ -116,6 +117,7 @@ Page({
           schoolFlag: true,
           lessonFlag: false,
           intelligenFlag: false,
+          bgdisplayclass: ".school-list .displaybg",
           dataType:1
         })
         break;
@@ -124,6 +126,7 @@ Page({
           schoolFlag:false,
           lessonFlag: true,
           intelligenFlag: false,
+          bgdisplayclass: ".school-list .displaybg",
           dataType:2
         })
         break;
@@ -132,6 +135,7 @@ Page({
           schoolFlag: false,
           lessonFlag: false,
           intelligenFlag: true,
+          bgdisplayclass: ".school-list .displaybg",
           dataType:3
         })
         break;
@@ -150,8 +154,7 @@ Page({
          break;
        case 2:
          this.setData({
-           lessonFilter: data,
-         })
+           lessonFilter: data,         })
          break;
        case 3:
          this.setData({
@@ -162,7 +165,8 @@ Page({
      this.setData({
        schoolFlag: false,
        lessonFlag: false,
-       intelligenFlag: false
+       intelligenFlag: false,
+       bgdisplayclass: ".school-list .hidebg"
      })
    },
    toucheInput:function(){

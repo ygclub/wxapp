@@ -65,6 +65,7 @@
     </view>
   <view class="school-list">
     <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower">
+        <view class="{{bgdisplayclass}}"></view>
     <view class="lesson-list clearfix" wx:for="{{schedule_list}}">
         <image src="{{item.image}}"></image>
         <view class="lesson-list-text">
