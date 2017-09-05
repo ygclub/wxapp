@@ -23,20 +23,20 @@
 
 .school-list{
   width: 100%;
-  padding: 10px;
-  line-height: 22px;
+  padding: 10rpx;
+  line-height: 44rpx;
   margin-right:0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-transform: translateX(90px);
-  transform: translateX(90px);
-  margin-left: -90px;
+  -webkit-transform: translateX(360rpx);
+  transform: translateX(360rpx);
+  margin-left: -360rpx;
   background: #fff;
 }
 .lesson-list{
    position: relative;
-   border-bottom:1rpx solid #ccc;
-   height: 200rpx;
+   /* border-bottom:1rpx solid #ccc; */
+    height:185rpx;
    width: 100%;
    overflow: hidden;
 }
@@ -63,11 +63,11 @@
   font-size:26rpx;
   color:#666666;
 }
-.lesson-list-text>.classAddress{
+.lesson-list-text .classAddress{
   font-size:22rpx;
   color:#929292;
 }
-.lesson-list-text>.classTime{
+.lesson-list-text .classTime{
   font-size:22rpx;
   color:#353535;
 }

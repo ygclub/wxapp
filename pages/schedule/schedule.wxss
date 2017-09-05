@@ -1,14 +1,14 @@
 /**index.wxss**/
 .schedule{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  justify-content: center;
-  background: #fff;
+  height:100%;
+  position:fixed;
+  justify-content:center;
+  background:#fff;
+  left:0; 
+  right:0;
+
 }
-.schedule .touche-box{
-  
-}
+
 
 .schedule .no-touched{
   border:1px solid #e6e6ea;
@@ -86,11 +86,13 @@
   transform: translateY(-50%);
 }
  .schedule-filter{
-   display: flex;
-   height: 96rpx;
-   line-height: 96rpx;
-   font-size:26rpx;
-   color:#353535;
+    display: flex;
+    height:90rpx;
+    line-height:90rpx;
+    font-size:26rpx;
+    color:#353535;
+    position: relative;
+    border-bottom:1rpx solid #e8e8e8;
  }
  .schedule-filter >view{
   flex: 1;
@@ -98,14 +100,27 @@
   position: relative;
  }
   .schedule-filter .filter-list{
-    position: absolute;
-    background: #fff;
-    top: 160rpx;
-    z-index: 999;
-    left: 0rpx;
-    right: 0rpx;
+    position:absolute;  
+    background:#fff;
+    top:89rpx;
+    z-index:999;
+    left:-1rpx;
+    right:0rpx;
+      max-height:240px; 
+    overflow-y:scroll; 
   }
 
+.schedule-filter-tab{
+  position: relative;
+}
+.schedule-filter-tab >image{
+  position:absolute;
+  width:20rpx;
+  height:15rpx;
+  right:25rpx;
+  top:50%;
+  margin-top:-8.5rpx;
+}
 
 .schedule-filter .filter-list view.choose{
     color: #fe6700;
@@ -130,16 +145,32 @@
  } 
  
  .school-list .displaybg{
-    position: fixed;
-    top:0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: #353535;
-    opacity: 0.4;
+   position:fixed;
+  top:0;
+  z-index:1;
+  width:100%;
+  background:#353535;
+  opacity:0.4;
+  left:0;
+  right:0;
+  height: 100%;
+  overflow: hidden;
 }
 .school-list .hidebg{
     opacity: 0;
 }
- 
 
+.lesson-list {
+  padding:10rpx 0;
+  border-bottom:1rpx solid #ccc;
+}
+
+.school-list.school-list-schedule{
+  padding:0 10rpx ;
+  line-height:44rpx;
+  margin-right:0;
+  background:#fff;
+}
+.school-list{
+  padding: 0;
+}

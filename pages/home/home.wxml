@@ -36,9 +36,8 @@
           bindtap="toModule"
           data-tab="{{itemHometab.toPage}}">
         <image src="{{itemHometab.image}}"
-               bindtap="toModule"
                data-tab="{{itemHometab.toPage}}"></image>
-        <text>{{itemHometab.title}}</text>
+        <text  data-tab="{{itemHometab.toPage}}">{{itemHometab.title}}</text>
     </view>
   </view>
 </view>

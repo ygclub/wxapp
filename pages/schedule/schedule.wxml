@@ -4,7 +4,7 @@
      wx:if="{{inputFalg}}"
      bindtouchstart ="toucheInput">
     <view class="no-touched-input">
-        <image src="../../image/after-class-icon.png"></image>
+        <image src="../../image/search-icon.png"></image>
         <text>搜索</text>
     </view>
   </view>
@@ -13,60 +13,66 @@
     <view class="touche-input fl">
       <image 
         class="search"
-        src="../../image/after-class-icon.png"></image>
+        src="../../image/search-icon.png"></image>
       <input placeholder="搜索" 
          class="" 
          placeholder-class=""/>
          <image 
             class="del"
-            src="../../image/after-class-icon.png"></image>
+            src="../../image/del-icon.png"></image>
     </view>
     <view class="input-canel fr"
        bindtouchstart ="toucheInputCanel">取消</view>
   </view>
   <view class="schedule-filter">
-    <view class="classname">
+    <view class="schedule-filter-tab">
+        <image src="../../image/icon-down.png"></image>
         <text 
           data-type="1"
-          bindtouchstart="filterList">{{schoolFilter.title}}</text> 
+          bindtap="filterList">{{schoolFilter.title}}</text> 
       </view>
       <view class="filter-list"
+            bindtap="lessonList"
+             data-index="{{item}}"
           wx:if="{{schoolFlag}}">
           <view 
-             bindtouchstart="lessonList"
              data-index="{{item}}"
              wx:for="{{schoolData}}"
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
         </view>
-    <view class="classname">
+    <view class="schedule-filter-tab">
+      <image src="../../image/icon-down.png"></image>
       <text 
           data-type="2"
-          bindtouchstart="filterList">{{lessonFilter.title}}</text>
+          bindtap="filterList">{{lessonFilter.title}}</text>
     </view>
     <view class="filter-list"
+        bindtap="lessonList"
+        data-index="{{item}}"
         wx:if="{{lessonFlag}}">
         <view data-index="{{item}}"
-             bindtouchstart="lessonList"
              wx:for="{{lessonData}}"
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
       </view>
-    <view class="classname">
+    <view class="schedule-filter-tab">
+      <image src="../../image/icon-down.png"></image>
       <text
          data-type="3"
-          bindtouchstart="filterList">{{intelligenFilter.title}}</text> 
+          bindtap="filterList">{{intelligenFilter.title}}</text> 
       </view>
    <view class="filter-list"
+         bindtap="lessonList"
+         data-index="{{item}}"
          wx:if="{{intelligenFlag}}">
        <view data-index="{{item}}"
-             bindtouchstart="lessonList"
              wx:for="{{intelligenData}}"
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
        </view>
     </view>
-  <view class="school-list">
-    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower">
-        <view class="{{bgdisplayclass}}"></view>
-    <view class="lesson-list clearfix" wx:for="{{schedule_list}}">
+  <view class="school-list school-list-schedule">
+    <view class="{{bgdisplayclass}}"></view>
+    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower"> 
+    <view class="lesson-list clearfix" wx:for="{{schedule_list}}" wx:key="">
         <image src="{{item.image}}"></image>
         <view class="lesson-list-text">
             <text class="className">{{item.course}}</text>

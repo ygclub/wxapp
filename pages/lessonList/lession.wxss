@@ -14,8 +14,8 @@
  display: flex;
  justify-content: space-between;
  width: 100%;
- height: 220rpx;
- border-bottom: 1rpx solid #ccc;
+  height:200rpx;
+  border-bottom: 1rpx solid #ccc; 
 }
 /* .content {
  width: 100%;
