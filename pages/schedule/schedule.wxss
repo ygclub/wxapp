@@ -100,22 +100,46 @@
   .schedule-filter .filter-list{
     position: absolute;
     background: #fff;
-    top: 70rpx;
+    top: 160rpx;
     z-index: 999;
-    left: 20rpx;
-    right: 20rpx;
+    left: 0rpx;
+    right: 0rpx;
   }
- .schedule-filter .filter-list>view{
-    line-height: 50rpx;
-    height: 50rpx;
-    text-align: center;
-    border-left: 1rpx solid #e8e8e8;
-    border-right: 1rpx solid #e8e8e8;
-    border-bottom: 1rpx solid #e8e8e8;
- }
- .schedule-filter .filter-list>view:first-child{
-   border-top: 1rpx solid #e8e8e8;
- }
- 
 
+
+.schedule-filter .filter-list view.choose{
+    color: #fe6700;
+ } 
+ .schedule-filter .filter-list view.default{
+    color: #353535;
+ } 
+  .schedule-filter .filter-list>view{
+    line-height: 80rpx;
+    height: 80rpx;
+    border-left: 1rpx solid #e8e8e8;
+    border-right: 0rpx solid #e8e8e8;
+    border-bottom: 1rpx solid #e8e8e8;
+    text-align: left;
+    padding-left: 25rpx;
+    color: #353535;
+    font-weight: bold;
+    font-size: 11pt;
+ }
+  .schedule-filter .filter-list>view:first-child{
+   border-top: 0rpx solid #e8e8e8;
+ } 
+ 
+ .school-list .displaybg{
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #353535;
+    opacity: 0.4;
+}
+.school-list .hidebg{
+    opacity: 0;
+}
+ 
 

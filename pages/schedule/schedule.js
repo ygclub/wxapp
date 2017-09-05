@@ -6,19 +6,23 @@ Page({
     intelligenData:[
       {
         title:"智能排序",
-        id:"-1"
+        id:"-1",
+        classname:"choose"
       },
       {
         title: "按课程",
-        id: "1"
+        id: "1",
+        classname: "default"
       },
       {
         title: "按项目点",
-        id:'2'
+        id:'2',
+        classname: "default"
       },
       {
         title: "按开课时间",
-        id:"3"
+        id:"3",
+        classname: "default"
       }
     ],
     schoolData: [],
@@ -29,6 +33,7 @@ Page({
     schoolFlag: false,
     lessonFlag: false,
     intelligenFlag: false,
+    bgdisplayclass: ".school-list .hidebg",
     dataType:1
   },
   //事件处理函数
@@ -44,9 +49,9 @@ Page({
       url: getApp().data.urlDomain+'/v1/school',
       success:function(res){
         var schools = res.data.result.school;
-        var schoolDataRes = [{"title":"全部项目点","id":0}]
+        var schoolDataRes = [{ "title": "全部项目点", "id": 0, "classname":"choose"}]
         for(var i = 0; i < schools.length; i++){
-           var school = {"title":schools[i].name,"id":i};
+          var school = { "title": schools[i].name, "id": i, "classname":"default"};
            schoolDataRes.push(school);
         }
         that.setData({
@@ -60,9 +65,9 @@ Page({
       url: getApp().data.urlDomain + '/v1/course',
       success: function (res) {
         var courses = res.data.result.course;
-        var courseDataRes = [{"title":"全部课程","id":0}]
+        var courseDataRes = [{ "title": "全部课程", "id": 0, "classname":"choose"}]
         for (var i = 0; i < courses.length; i++) {
-          var course = { "title": courses[i].name, "id": i+1 };
+          var course = { "title": courses[i].name, "id": i + 1, "classname":"default"};
           courseDataRes.push(course);
         }
         that.setData({
@@ -112,26 +117,72 @@ Page({
     console.log(type);
     switch(type-0){
       case 1:
+        console.log(this.data.schoolFilter.title);
+        var itemDatas = []
+        for (var i = 0; i < this.data.schoolData.length;i++){
+          var item = this.data.schoolData[i];
+          console.log(this.data.schoolFilter.title+"- this.data.schoolData[i].classname=" + this.data.schoolData[i].title);
+          if (this.data.schoolFilter.title == this.data.schoolData[i].title){
+            item.classname ="choose";
+          }else{
+            item.classname = "default";
+          }
+          itemDatas.push(item);
+        }
+        console.log(itemDatas);
+
         this.setData({
           schoolFlag: true,
           lessonFlag: false,
           intelligenFlag: false,
+          bgdisplayclass: "displaybg",
+          schoolData:itemDatas,
           dataType:1
         })
         break;
       case 2:
+        var itemDatas = []
+        for (var i = 0; i < this.data.lessonData.length; i++) {
+          var item = this.data.lessonData[i];
+          console.log(this.data.lessonFilter.title + "- this.data.lessonData[i].classname=" + this.data.lessonData[i].title);
+          if (this.data.lessonFilter.title == this.data.lessonData[i].title) {
+            item.classname ="choose";
+          } else {
+            item.classname ="default";
+          }
+          itemDatas.push(item);
+        }
+        console.log(itemDatas);
+
         this.setData({
           schoolFlag:false,
           lessonFlag: true,
           intelligenFlag: false,
+          bgdisplayclass: "displaybg",
+          lessonData:itemDatas,
           dataType:2
         })
         break;
       case 3:
+        var itemDatas = []
+        for (var i = 0; i < this.data.intelligenData.length; i++) {
+          var item = this.data.intelligenData[i];
+          console.log(this.data.intelligenFilter.title + "- this.data.intelligenData[i].classname=" + this.data.intelligenData[i].title);
+          if (this.data.intelligenFilter.title == this.data.intelligenData[i].title) {
+            item.classname = "choose";
+          } else {
+            item.classname = "default";
+          }
+          itemDatas.push(item);
+        }
+        console.log(itemDatas);
+
         this.setData({
           schoolFlag: false,
           lessonFlag: false,
           intelligenFlag: true,
+          bgdisplayclass: "displaybg",
+          intelligenData:itemDatas,
           dataType:3
         })
         break;
@@ -142,7 +193,7 @@ Page({
      console.log(data);
      var type = this.data.dataType;
      console.log(type);
-     switch (type - 0) {
+     switch (type) {
        case 1:
          this.setData({
            schoolFilter: data,
@@ -150,7 +201,7 @@ Page({
          break;
        case 2:
          this.setData({
-           lessonFilter: data,
+           lessonFilter: data,       
          })
          break;
        case 3:
@@ -162,7 +213,8 @@ Page({
      this.setData({
        schoolFlag: false,
        lessonFlag: false,
-       intelligenFlag: false
+       intelligenFlag: false,
+       bgdisplayclass: "hidebg"
      })
    },
    toucheInput:function(){
