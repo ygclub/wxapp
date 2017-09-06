@@ -78,10 +78,11 @@
   font-size:26rpx;
   color:#b2b2b2;
 }
-.touche-input .input-canel{
+ .input-canel{
   color: #00c302;
   font-size:32rpx;
   position: absolute;
+  right:20rpx;
   top: 50%;
   transform: translateY(-50%);
 }

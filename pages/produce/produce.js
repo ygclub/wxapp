@@ -1,16 +1,17 @@
 // pages/produce/produce.js
-
+var iconUrl = "../../image/map-icon.png";
 Page({
 
   /**
    * 页面的初始数据
    */
+  
   data: {
     active:1,
     longitude:"",
     latitude:"",
     markers: [{
-      iconPath: "/def-img/race-info-time.svg",
+      iconPath: iconUrl,
       id: 0,
       latitude: 40.0104100000,
       longitude: 116.3503500000,

@@ -3,6 +3,7 @@
 var app = getApp()
 var QQMapWX = require('../../three/qqmap-wx-jssdk.js');
 console.log(QQMapWX);
+var iconUrl = "../../image/map-icon.png"
 var qqmapsdk;
 Page({
   data: {
@@ -34,7 +35,7 @@ Page({
     ],
     markers: [
       {
-        iconPath: "/def-img/race-info-time.svg",
+        iconPath: iconUrl,
         id: 1,
         latitude: 40.0104100000, 
         longitude: 116.3503500000,
@@ -50,7 +51,7 @@ Page({
           }
       },
       {
-        iconPath: "/def-img/race-info-time.svg",
+        iconPath: iconUrl,
         id: 2,
         latitude: 40.1060400000,
         longitude: 116.2669400000,
@@ -66,7 +67,7 @@ Page({
         }
       },
       {
-        iconPath: "/def-img/race-info-time.svg",
+        iconPath: iconUrl,
         id: 3,
         latitude: 39.9961200000,
         longitude: 116.4808500000,
