@@ -28,7 +28,7 @@
     </view>
     <view class="item about clearfix"
           bindtap="toPage"
-          data-id="0">
+          data-id="3">
       <text class="fl">关于小程序</text>
       <image class="fr" src="../../image/icon-right.png"></image>
     </view>

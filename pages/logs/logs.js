@@ -14,7 +14,7 @@ Page({
     });
   },
   toPage:function(e){
-    console.log(e);
+    console.log(parseInt(e.target.dataset.id));
     switch (parseInt(e.target.dataset.id)) {
       case 0:
         wx.navigateTo({
@@ -29,6 +29,11 @@ Page({
       case 2:
         wx.navigateTo({
           url: '../../pages/lessonList/lession?type=2'
+        })
+        break;
+      case 3:
+        wx.navigateTo({
+          url: '../../pages/author/author',
         })
         break;
       default: break;
