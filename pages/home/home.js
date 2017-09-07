@@ -32,6 +32,20 @@ Page({
       }
     ]
   },
+
+  //banner 点击跳转
+  bannerDirectTo:function(e){
+
+    console.log(e.target.dataset.link);
+    var link = e.target.dataset.link;
+    if(link == "home"){
+      return;
+    }
+    wx.navigateTo({
+      url: link
+    })
+  },
+
   //事件处理函数
   toModule:function(e){
     switch (parseInt(e.target.dataset.tab)) {
@@ -69,7 +83,7 @@ Page({
         console.log(swiperData);
         var swiperArr = [];
         for(var i = 0 ;i<swiperData.length;i++){
-          swiperArr.push(getApp().data.urlDomain+swiperData[i].image);
+          swiperArr.push({ "image": getApp().data.urlDomain + swiperData[i].image, "link": swiperData[i].link});
         }
         console.log(swiperArr);
         that.setData({

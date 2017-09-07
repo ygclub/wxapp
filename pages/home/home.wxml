@@ -9,7 +9,7 @@
     <block wx:for="{{imgUrls}}"
            wx:key='swiper' >
         <swiper-item>
-      <image src="{{item}}" class="home-img slide-image"/>
+      <image src="{{item.image}}" class="home-img slide-image" data-link="{{item.link}}" bindtap="bannerDirectTo"/>
     </swiper-item>
     </block>
   </swiper>
