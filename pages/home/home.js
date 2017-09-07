@@ -3,6 +3,7 @@
 var app = getApp()
 Page({
   data: {
+    defUrl: getApp().data.urlDomain,
     imgUrls: [],
     indicatorDots: true,
     autoplay: true,
