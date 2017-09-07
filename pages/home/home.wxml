@@ -7,7 +7,7 @@
   circular="{{circular}}"
   interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}"
-           wx:key='' >
+           wx:key='swiper' >
         <swiper-item>
       <image src="{{item}}" class="home-img slide-image"/>
     </swiper-item>
@@ -15,7 +15,7 @@
   </swiper>
   <view class="home-message">
   <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2700">
-  <block wx:for="{{newList}}">
+  <block wx:for="{{newList}}" wx:key="">
        <navigator url="#" open-type="navigate">
          <swiper-item>
           <view class="clearfix">
