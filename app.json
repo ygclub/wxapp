@@ -1,32 +1,32 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/coordinate/coordinate",
     "pages/produce/produce",
     "pages/schedule/schedule",
     "pages/logs/logs",
-    "pages/lessonList/lession",  
+    "pages/lessonList/lession",
     "pages/index/index",
     "pages/calculator/calculator",
     "pages/afterClass/afterClass",
-    "pages/wx/wx",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/author/author"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#477926",
     "navigationBarTitleText": "LEAD阳光",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#fe6700",
-    "color":"#535353",
-    "borderStyle":"white",
+    "color": "#535353",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/home/home",
         "iconPath": "image/home-tab.png",
-        "selectedIconPath":"image/home-tab-active.png",
+        "selectedIconPath": "image/home-tab-active.png",
         "text": "首页"
       },
       {
@@ -42,4 +42,4 @@
     "downloadFile": 10000
   },
   "debug": true
-}  
+}

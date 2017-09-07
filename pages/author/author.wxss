@@ -1,4 +1,4 @@
-/**index.wxss**/
+/* author.wxss *//**index.wxss**/
 .about-lead{
   padding-bottom:100rpx;
   padding-top:100rpx;

@@ -6,10 +6,10 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     //贡献者数组
-    userData:[
+    userData: [
       {
-        name:"绕平平平平",
-        image:"../../def-img/xboy.png",
+        name: "绕平平平平",
+        image: "../../def-img/xboy.png",
       },
       {
         name: "toudadadadasdadadadadad",
@@ -33,11 +33,11 @@ Page({
       }
     ],
     //版本记录数组
-    versionData:[
+    versionData: [
       {
-        code:"V1.0.1",
-        time:"2017年2月13日",
-        content:"1.登录页面优化 2.付款人bugx修复 3.增加条目z以后修改人员"
+        code: "V1.0.1",
+        time: "2017年2月13日",
+        content: "1.登录页面优化 2.付款人bugx修复 3.增加条目z以后修改人员"
       },
       {
         code: "V1.0.2",
@@ -54,6 +54,6 @@ Page({
 
 
   onLoad: function () {
-  
+
   }
 })
