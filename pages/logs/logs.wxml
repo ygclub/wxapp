@@ -4,32 +4,48 @@
       <image class="fl"  src="{{user_avatar}}"></image>
       <text class="fl">{{user_nickname}}</text>
     </view>
-    <view class="item  list">
+    <view class="item  list border-botton">
       <view class="list-first clearfix"
            bindtap="toPage"
            data-id="2">
-         <image class="fl" src="../../image/my-creat.png"></image>
-        <text class="fl">我发起的课后十分钟</text>
-        <image class="fr" src="../../image/icon-right.png"></image>
+         <image class="fl"
+                data-id="2"
+                src="../../image/my-creat.png"></image>
+        <text class="fl"
+              data-id="2">我发起的课后十分钟</text>
+        <image class="fr"
+               data-id="2"
+               src="../../image/icon-right.png"></image>
       </view>
     </view>
     <view class="item  list marb clearfix"
           bindtap="toPage"
           data-id="1">
-      <image class="fl" src="../../image/my-join.png"></image>
-      <text class="fl">我参与的课程</text>
-      <image class="fr" src="../../image/icon-right.png"></image>
+      <image class="fl"
+             data-id="1"
+             src="../../image/my-join.png"></image>
+      <text class="fl"
+            data-id="1">我参与的课程</text>
+      <image class="fr" 
+             data-id="1"
+             src="../../image/icon-right.png"></image>
+    </view>
+    <view class="item about border-botton clearfix"
+          bindtap="toPage"
+          data-id="0">
+      <text class="fl"
+            data-id="0">关于阳光</text>
+      <image class="fr"
+             data-id="0"
+             src="../../image/icon-right.png"></image>
     </view>
     <view class="item about clearfix"
           bindtap="toPage"
-          data-id="0">
-      <text class="fl">关于阳光</text>
-      <image class="fr" src="../../image/icon-right.png"></image>
-    </view>
-    <view class="item about clearfix"
-          bindtap="toPage"
-          data-id="0">
-      <text class="fl">关于小程序</text>
-      <image class="fr" src="../../image/icon-right.png"></image>
+          data-id="3">
+      <text class="fl" 
+            data-id="3">关于小程序</text>
+      <image class="fr"
+             data-id="3"
+             src="../../image/icon-right.png"></image>
     </view>
 </view>

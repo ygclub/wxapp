@@ -74,3 +74,6 @@
   top: 50%;
   transform:translateY(-50%);
 }
+.border-botton{
+  border-bottom: 1rpx solid #ccc;
+}

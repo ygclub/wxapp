@@ -9,6 +9,7 @@
     "pages/index/index",
     "pages/calculator/calculator",
     "pages/afterClass/afterClass",
+    "pages/wx/wx",
     "pages/about/about"
   ],
   "window":{

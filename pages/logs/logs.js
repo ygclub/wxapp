@@ -7,10 +7,10 @@ Page({
   onLoad: function () {
     
     var user = getApp().data.user;
+    console.log(user);
     this.setData({
       user_nickname: user.nickName,
       user_avatar: user.avatarUrl
-      
     });
   },
   toPage:function(e){
@@ -29,6 +29,11 @@ Page({
       case 2:
         wx.navigateTo({
           url: '../../pages/lessonList/lession?type=2'
+        })
+        break;
+      case 3:
+        wx.navigateTo({
+          url: '../../pages/wx/wx'
         })
         break;
       default: break;

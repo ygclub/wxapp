@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container about-lead">
+  <view class="wx">
+    <view class="title">
+      <text>联系方式</text>
+    </view>
+    <view class="content t-c margin-botton">微信/QQ/Mail:3939393</view>
+    <view class="title">
+      <text>贡献者</text>
+    </view>
+     <view class="content user clearfix margin-botton">
+      <view class="content-item"
+        wx:for="{{userData}}"
+        wx:for-item="user"
+        wx:key="">
+        <image src="../../def-img/xboy.png"></image>
+        <view class="classname">{{user.name}}</view>
+      </view>
+    </view> 
+    <view class="title">
+      <text>版本记录</text> 
+    </view>
+    <view class="content">
+      <view class="version-index"
+        wx:for="{{versionData}}"
+        wx:for-item="version"
+        wx:key="">
+        <view class="version-title">{{version.code}}</view>
+        <view class="version-time">{{version.time}}</view>
+        <view class="version-text">{{version.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>

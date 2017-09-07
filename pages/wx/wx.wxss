@@ -1,0 +1,88 @@
+/**index.wxss**/
+.about-lead{
+  padding-bottom:100rpx;
+  padding-top:100rpx;
+  padding-left: 34rpx;
+  padding-right: 34rpx;
+  box-sizing: content-box;
+}
+
+.about-lead .title{
+  font-size:34rpx;
+  color:#353535;
+  letter-spacing:0;
+  text-align:center;
+  margin-bottom:30rpx;
+  height:62rpx;
+  line-height:53rpx;
+}
+.about-lead .content{
+  font-size:26rpx;
+  color:#353535;
+  letter-spacing:0;
+  line-height:46rpx;
+  text-align:justify;
+  text-justify:distribute-all-lines；
+}
+.about-lead .content .other{
+  color: #888;
+}
+.about-lead .content.t-c{
+  text-align: center;
+}
+.title{
+  font-size: 24rpx;
+}
+.title>text{
+  padding: 20rpx 60rpx;
+  border-bottom: 3rpx solid #ccc;
+}
+.version-index{
+  border-bottom: 2rpx solid #ccc;
+  padding:20rpx 25rpx;
+}
+.version-index:last-child{
+  border: none;
+}
+.version-index .version-title{
+  font-size: 36rpx;
+  color: #194e9e;
+}
+.version-index .version-time{
+  color: #ccc;
+}
+.version-index .version-text{
+  color: #194e9e;
+  font-size: 24rpx;
+}
+.user{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content:center;  
+  align-content:center;
+  width:100%;
+}
+.user .content-item{
+  width:120rpx;
+  text-align:center;
+  padding:0 15rpx;
+
+}
+.user .content-item>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+}
+.user .content-item>view{
+  width:120rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+.margin-botton{
+  margin-bottom: 120rpx;
+}
