@@ -8,7 +8,7 @@ Page({
     //贡献者数组
     userData: [
       {
-        name: "绕平平平平",
+        name: "Test",
         image: "../../def-img/xboy.png",
       },
       {

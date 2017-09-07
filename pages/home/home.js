@@ -69,7 +69,7 @@ Page({
         console.log(swiperData);
         var swiperArr = [];
         for(var i = 0 ;i<swiperData.length;i++){
-          swiperArr.push(swiperData[i].image);
+          swiperArr.push(getApp().data.urlDomain+swiperData[i].image);
         }
         console.log(swiperArr);
         that.setData({
@@ -98,7 +98,5 @@ Page({
      }
        
      })
-
-     //request banners
   }
 })
