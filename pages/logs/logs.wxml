@@ -4,7 +4,8 @@
       <image class="fl"  src="{{user_avatar}}"></image>
       <text class="fl">{{user_nickname}}</text>
     </view>
-    <view class="item  list border-botton">
+    <view wx:if="{{login}}"
+          class="item  list border-botton">
       <view class="list-first clearfix"
            bindtap="toPage"
            data-id="2">
@@ -18,7 +19,8 @@
                src="../../image/icon-right.png"></image>
       </view>
     </view>
-    <view class="item  list marb clearfix"
+    <view wx:if="{{login}}"
+          class="item  list marb clearfix"
           bindtap="toPage"
           data-id="1">
       <image class="fl"

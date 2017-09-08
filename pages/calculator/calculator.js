@@ -166,7 +166,7 @@ Page({
       var data = this.data;
       console.log(111);
       return {
-        title: '本次聚餐金额',
+        title: '本次活动AA金额',
         path: 'pages/cost/cost?money='+data.cost.money
         +'&people='+data.cost.people
         +'&student='+data.cost.student
@@ -177,9 +177,16 @@ Page({
           console.log("ok")
         },
       }
+    }else{
+      return {
+        title: '小伙伴AA',
+        path: '/pages/calculator/calculator',
+        success: function (res) {
+          // 转发成功
+          console.log("ok")
+        },
+      }
     }
-    console.log("11`")
-    return null;
   }
 })
 

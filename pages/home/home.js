@@ -37,7 +37,6 @@ Page({
   //banner 点击跳转
   bannerDirectTo:function(e){
 
-    console.log(e.target.dataset.link);
     var link = e.target.dataset.link;
     if(link == "home"){
       return;
@@ -79,14 +78,14 @@ Page({
     wx.request({
       url: getApp().data.urlDomain +'v1/banner',
       success:function(res){
-        console.log(res.data.result.banner);
+        
         var swiperData = res.data.result.banner;
-        console.log(swiperData);
+       
         var swiperArr = [];
         for(var i = 0 ;i<swiperData.length;i++){
           swiperArr.push({ "image": swiperData[i].image, "link": swiperData[i].link});
         }
-        console.log(swiperArr);
+       
         that.setData({
           imgUrls: swiperArr
         })
@@ -99,7 +98,7 @@ Page({
      wx.request({
        url: getApp().data.urlDomain+'/v1/news',
        success:function(res){
-        console.log(res.data);
+       
         var newsArray = res.data.result.news
         var newRes = []
         for(var i = 0; i < newsArray.length; i++){

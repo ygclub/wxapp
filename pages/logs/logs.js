@@ -1,17 +1,42 @@
 //logs.js
 
+var img ="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503247087783&di=e2423e4f765bf38b3d4040862f064e65&imgtype=0&src=http%3A%2F%2Fp4.qqgexing.com%2Ftouxiang%2F20120810%2F1502%2F5024b21b74511.jpg";
+
 Page({
   data: {
-    imgSrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503247087783&di=e2423e4f765bf38b3d4040862f064e65&imgtype=0&src=http%3A%2F%2Fp4.qqgexing.com%2Ftouxiang%2F20120810%2F1502%2F5024b21b74511.jpg"
+    imgSrc:img,
+    login:false,
+    user_nickname:"未登录",
+    user_avatar:img
   },
   onLoad: function () {
-    
     var user = getApp().data.user;
     console.log(user);
-    this.setData({
-      user_nickname: user.nickName,
-      user_avatar: user.avatarUrl
-    });
+    if(user){
+      this.setData({
+        user_nickname: user.nickName,
+        user_avatar: user.avatarUrl || img,
+        login:true,
+      });
+    }else {
+     //弹出登录
+      wx.login({
+        success: function (res) {
+          console.log(res);
+          if (res.code) {
+            //发起网络请求
+            // wx.request({
+            //   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code',
+            //   data: {
+            //     code: res.code
+            //   }
+            // })
+          } else {
+            console.log('获取用户登录态失败！' + res.errMsg)
+          }
+        }
+      });
+    }
   },
   toPage:function(e){
     console.log(parseInt(e.target.dataset.id));
