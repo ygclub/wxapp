@@ -18,22 +18,22 @@ Page({
     switch (parseInt(e.target.dataset.id)) {
       case 0:
         wx.navigateTo({
-          url: '../../pages/about/about'
+          url: '/pages/about/about'
         })
         break;
       case 1:
         wx.navigateTo({
-          url: '../../pages/lessonList/lession?type=1'
+          url: '/pages/lessonList/lession?type=1'
         })
         break;
       case 2:
         wx.navigateTo({
-          url: '../../pages/lessonList/lession?type=2'
+          url: '/pages/lessonList/lession?type=2'
         })
         break;
       case 3:
         wx.navigateTo({
-          url: '../../pages/author/author',
+          url: '/pages/author/author',
         })
         break;
       default: break;

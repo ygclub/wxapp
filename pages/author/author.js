@@ -9,27 +9,27 @@ Page({
     userData: [
       {
         name: "Test",
-        image: "../../def-img/xboy.png",
+        image: "/def-img/xboy.png",
       },
       {
         name: "toudadadadasdadadadadad",
-        image: "../../def-img/xboy.png",
+        image: "/def-img/xboy.png",
       },
       {
         name: "toudadadadasdadadadadad",
-        image: "../../def-img/xboy.png",
+        image: "/def-img/xboy.png",
       },
       {
         name: "toudadadadasdadadadadad",
-        image: "../../def-img/xboy.png",
+        image: "/def-img/xboy.png",
       },
       {
         name: "toudadadadasdadadadadad",
-        image: "../../def-img/xboy.png",
+        image: "/def-img/xboy.png",
       },
       {
         name: "toudadadadasdadadadadad",
-        image: "../../def-img/xboy.png",
+        image: "/def-img/xboy.png",
       }
     ],
     //版本记录数组
