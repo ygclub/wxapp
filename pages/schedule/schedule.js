@@ -33,13 +33,18 @@ Page({
     schoolFlag: false,
     lessonFlag: false,
     intelligenFlag: false,
+    lesson_arrow:"../../image/icon-down.png",
+    school_arrow: "../../image/icon-down.png",
+    intelligen_arrow: "../../image/icon-down.png",
     bgdisplayclass: ".school-list .hidebg",
-    dataType:1
+    dataType:1,
+    search_key:"none",
   },
   //事件处理函数
   onShow: function () {
 
   },
+
   onLoad: function () {
 
     var that = this;
@@ -59,7 +64,7 @@ Page({
         });
       }
     });
-
+    
     //query coures
     wx.request({
       url: getApp().data.urlDomain + '/v1/course',
@@ -81,6 +86,9 @@ Page({
       schoolFilter: {title:"全部项目点",id:0},
       lessonFilter: {title:"全部课程",id:0},
       intelligenFilter: this.data.intelligenData[0],
+      lesson_arrow: "../../image/icon-down.png",
+      school_arrow: "../../image/icon-down.png",
+      intelligen_arrow: "../../image/icon-down.png"
     })
 
     //query schedule  by default
@@ -110,12 +118,41 @@ Page({
     })
 
   },
+  //分享
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '阳光课程表',
+      path: '/pages/schedule/schedule',
+      success: function (res) {
+        // 转发成功
+        console.log(res);
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log(res);
+      }
+    }
+  },
   filterList:function(e){
     console.log(e)
     var type = e.target.dataset.type;
     console.log(type);
     switch(type-0){
       case 1:
+        if (this.data.schoolFlag) {
+          this.setData({
+            schoolFlag: false,
+            bgdisplayclass: "hidebg",
+            lesson_arrow: "../../image/icon-down.png",
+            school_arrow: "../../image/icon-down.png",
+            intelligen_arrow: "../../image/icon-down.png",
+          })
+          return;
+        }
         console.log(this.data.schoolFilter.title);
         var itemDatas = []
         for (var i = 0; i < this.data.schoolData.length;i++){
@@ -135,11 +172,24 @@ Page({
           lessonFlag: false,
           intelligenFlag: false,
           bgdisplayclass: "displaybg",
+          lesson_arrow: "../../image/icon-down.png",
+          school_arrow: "../../image/icon-up.png",
+          intelligen_arrow: "../../image/icon-down.png",
           schoolData:itemDatas,
           dataType:1
         })
         break;
       case 2:
+        if (this.data.lessonFlag) {
+          this.setData({
+            lessonFlag: false,
+            bgdisplayclass: "hidebg",
+            lesson_arrow: "../../image/icon-down.png",
+            school_arrow: "../../image/icon-down.png",
+            intelligen_arrow: "../../image/icon-down.png",
+          })
+          return;
+        }
         var itemDatas = []
         for (var i = 0; i < this.data.lessonData.length; i++) {
           var item = this.data.lessonData[i];
@@ -158,11 +208,24 @@ Page({
           lessonFlag: true,
           intelligenFlag: false,
           bgdisplayclass: "displaybg",
+          lesson_arrow: "../../image/icon-up.png",
+          school_arrow: "../../image/icon-down.png",
+          intelligen_arrow: "../../image/icon-down.png",
           lessonData:itemDatas,
           dataType:2
         })
         break;
       case 3:
+        if (this.data.intelligenFlag) {
+          this.setData({
+            intelligenFlag: false,
+            bgdisplayclass: "hidebg",
+            lesson_arrow: "../../image/icon-down.png",
+            school_arrow: "../../image/icon-down.png",
+            intelligen_arrow: "../../image/icon-down.png",
+          })
+          return;
+        }
         var itemDatas = []
         for (var i = 0; i < this.data.intelligenData.length; i++) {
           var item = this.data.intelligenData[i];
@@ -181,6 +244,9 @@ Page({
           lessonFlag: false,
           intelligenFlag: true,
           bgdisplayclass: "displaybg",
+          lesson_arrow: "../../image/icon-down.png",
+          school_arrow: "../../image/icon-down.png",
+          intelligen_arrow: "../../image/icon-up.png",
           intelligenData:itemDatas,
           dataType:3
         })
@@ -209,11 +275,15 @@ Page({
          })
          break;
      }
+     this.query_schedule();
      this.setData({
        schoolFlag: false,
        lessonFlag: false,
        intelligenFlag: false,
-       bgdisplayclass: "hidebg"
+       bgdisplayclass: "hidebg",
+       lesson_arrow: "../../image/icon-down.png",
+       school_arrow: "../../image/icon-down.png",
+       intelligen_arrow: "../../image/icon-down.png",
      })
    },
    toucheInput:function(){
@@ -223,7 +293,49 @@ Page({
    },
    toucheInputCanel:function(){
      this.setData({
-       inputFalg: true
+       inputFalg: true,
+       search_key: "none"
+     });
+     this.query_schedule();
+   },
+   search_by_input:function(e){
+     this.setData({
+       search_key : e.detail.value
+     });
+     this.query_schedule();
+   },
+   load_more:function(){
+
+   },
+   upper_refresh:function(){
+      this.query_schedule(); 
+   },
+   query_schedule:function(){
+     var that = this;
+     var school_condition = this.data.schoolFilter.title.indexOf("全部") != -1 ? "all" : this.data.schoolFilter.title;
+     var lesson_condition = this.data.lessonFilter.title.indexOf("全部") != -1 ? "all" : this.data.lessonFilter.title;
+     var search_key = this.data.search_key;
+     wx.request({
+       url: getApp().data.urlDomain + '/v1/query_class_schedule',
+       method: "post",
+       header: {
+         "Content-Type": "application/x-www-form-urlencoded"
+       },
+       data: json2Form({ "school": school_condition, "course": lesson_condition, "keyword": search_key, "sort": this.data.intelligenFilter.id}),
+       success: function (res) {
+        
+         var schedules = res.data.result.schedule;
+         var resArray = []
+         for (var i = 0; i < schedules.length; i++) {
+
+           var item = schedules[i];
+           resArray.push(item);
+         }
+         that.setData({
+
+           schedule_list: resArray
+         });
+       }
      })
    }
 })

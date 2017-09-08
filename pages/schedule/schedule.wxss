@@ -60,7 +60,7 @@
   transform: translateY(-50%);
 }
 .touche-input >.search{
-  width:25rpx;
+  width:26rpx;
   height:26rpx;
   left: 16rpx;
 }
@@ -76,7 +76,7 @@
   height:55rpx;
   padding-left: 51rpx;
   font-size:26rpx;
-  color:#b2b2b2;
+  color:#333333;
 }
  .input-canel{
   color: #00c302;
@@ -118,7 +118,7 @@
   position:absolute;
   width:20rpx;
   height:15rpx;
-  right:25rpx;
+  right:35rpx;
   top:50%;
   margin-top:-8.5rpx;
 }

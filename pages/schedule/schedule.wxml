@@ -16,6 +16,8 @@
         src="../../image/search-icon.png"></image>
       <input placeholder="搜索" 
          class="" 
+         bindconfirm = "search_by_input"
+         confirm-type="search"
          placeholder-class=""/>
          <image 
             class="del"
@@ -26,7 +28,7 @@
   </view>
   <view class="schedule-filter">
     <view class="schedule-filter-tab">
-        <image src="../../image/icon-down.png"></image>
+        <image src="{{school_arrow}}"></image>
         <text 
           data-type="1"
           bindtap="filterList">{{schoolFilter.title}}</text> 
@@ -41,7 +43,7 @@
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
         </view>
     <view class="schedule-filter-tab">
-      <image src="../../image/icon-down.png"></image>
+      <image src="{{lesson_arrow}}"></image>
       <text 
           data-type="2"
           bindtap="filterList">{{lessonFilter.title}}</text>
@@ -55,7 +57,7 @@
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
       </view>
     <view class="schedule-filter-tab">
-      <image src="../../image/icon-down.png"></image>
+      <image src="{{intelligen_arrow}}"></image>
       <text
          data-type="3"
           bindtap="filterList">{{intelligenFilter.title}}</text> 
@@ -71,7 +73,7 @@
     </view>
   <view class="school-list school-list-schedule">
     <view class="{{bgdisplayclass}}"></view>
-    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower"> 
+    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower"  bindscrolltoupper="upper_refresh"> 
     <view class="lesson-list clearfix" wx:for="{{schedule_list}}" wx:key="">
         <image src="{{item.image}}"></image>
         <view class="lesson-list-text">
