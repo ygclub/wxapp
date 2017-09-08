@@ -18,7 +18,7 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '关于LEAD阳光',
+      title: '关于阳光',
       path: '/pages/about/about',
       success: function (res) {
         // 转发成功
