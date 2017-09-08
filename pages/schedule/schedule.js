@@ -37,7 +37,8 @@ Page({
     school_arrow: "../../image/icon-down.png",
     intelligen_arrow: "../../image/icon-down.png",
     bgdisplayclass: ".school-list .hidebg",
-    dataType:1
+    dataType:1,
+    search_key:"none"
   },
   //事件处理函数
   onShow: function () {
@@ -191,7 +192,7 @@ Page({
           intelligenFlag: false,
           bgdisplayclass: "displaybg",
           lesson_arrow: "../../image/icon-up.png",
-          school_arrow: "../../image/icon-up.png",
+          school_arrow: "../../image/icon-down.png",
           intelligen_arrow: "../../image/icon-down.png",
           lessonData:itemDatas,
           dataType:2
@@ -203,7 +204,7 @@ Page({
             intelligenFlag: false,
             bgdisplayclass: "hidebg",
             lesson_arrow: "../../image/icon-down.png",
-            school_arrow: "../../image/icon-up.png",
+            school_arrow: "../../image/icon-down.png",
             intelligen_arrow: "../../image/icon-down.png",
           })
           return;
@@ -227,7 +228,7 @@ Page({
           intelligenFlag: true,
           bgdisplayclass: "displaybg",
           lesson_arrow: "../../image/icon-down.png",
-          school_arrow: "../../image/icon-up.png",
+          school_arrow: "../../image/icon-down.png",
           intelligen_arrow: "../../image/icon-up.png",
           intelligenData:itemDatas,
           dataType:3
@@ -275,22 +276,33 @@ Page({
    },
    toucheInputCanel:function(){
      this.setData({
-       inputFalg: true
-     })
+       inputFalg: true,
+       search_key: "none"
+     });
+     this.query_schedule();
+   },
+   search_by_input:function(e){
+     this.setData({
+       search_key : e.detail.value
+     });
+
+     this.query_schedule();
+
    },
    query_schedule:function(){
      var that = this;
      var school_condition = this.data.schoolFilter.title.indexOf("全部") != -1 ? "all" : this.data.schoolFilter.title;
      var lesson_condition = this.data.lessonFilter.title.indexOf("全部") != -1 ? "all" : this.data.lessonFilter.title;
+     var search_key = this.data.search_key;
      wx.request({
        url: getApp().data.urlDomain + '/v1/query_class_schedule',
        method: "post",
        header: {
          "Content-Type": "application/x-www-form-urlencoded"
        },
-       data: json2Form({ "school": school_condition, "course": lesson_condition, "keyword": "none", "sort": this.data.intelligenFilter.id}),
+       data: json2Form({ "school": school_condition, "course": lesson_condition, "keyword": search_key, "sort": this.data.intelligenFilter.id}),
        success: function (res) {
-         
+        
          var schedules = res.data.result.schedule;
          var resArray = []
          for (var i = 0; i < schedules.length; i++) {

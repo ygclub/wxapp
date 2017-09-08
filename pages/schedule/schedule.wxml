@@ -16,6 +16,8 @@
         src="../../image/search-icon.png"></image>
       <input placeholder="搜索" 
          class="" 
+         bindconfirm = "search_by_input"
+         confirm-type="search"
          placeholder-class=""/>
          <image 
             class="del"
