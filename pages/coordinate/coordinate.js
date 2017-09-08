@@ -58,7 +58,7 @@ Page({
                 image: mapObj.image,
                 location: mapObj.location,
                 gather_location: mapObj.gather_location,
-                dis: dis,
+                dis: "计算中...",
                 course: mapObj.course,
                 class_weekday: mapObj.class_weekday,
                 class_time: mapObj.class_time
@@ -86,11 +86,7 @@ Page({
                 e: longitude
               }, arr, qqmapsdk,i);
             }
-            console.log(arr);
-            // that.speed({
-            //   s: latitude,
-            //   e: longitude
-            // }, arr, qqmapsdk);
+          
             that.setData({
               listDatas: listDataArr,
               markers: markDataArr,
