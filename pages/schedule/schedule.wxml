@@ -73,7 +73,7 @@
     </view>
   <view class="school-list school-list-schedule">
     <view class="{{bgdisplayclass}}"></view>
-    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower"> 
+    <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower"  bindscrolltoupper="upper_refresh"> 
     <view class="lesson-list clearfix" wx:for="{{schedule_list}}" wx:key="">
         <image src="{{item.image}}"></image>
         <view class="lesson-list-text">

@@ -38,12 +38,13 @@ Page({
     intelligen_arrow: "../../image/icon-down.png",
     bgdisplayclass: ".school-list .hidebg",
     dataType:1,
-    search_key:"none"
+    search_key:"none",
   },
   //事件处理函数
   onShow: function () {
 
   },
+
   onLoad: function () {
 
     var that = this;
@@ -63,7 +64,7 @@ Page({
         });
       }
     });
-
+    
     //query coures
     wx.request({
       url: getApp().data.urlDomain + '/v1/course',
@@ -117,9 +118,6 @@ Page({
     })
 
   },
-
-  
-
   filterList:function(e){
     console.log(e)
     var type = e.target.dataset.type;
@@ -285,9 +283,13 @@ Page({
      this.setData({
        search_key : e.detail.value
      });
-
      this.query_schedule();
+   },
+   load_more:function(){
 
+   },
+   upper_refresh:function(){
+      this.query_schedule(); 
    },
    query_schedule:function(){
      var that = this;
@@ -313,7 +315,6 @@ Page({
          that.setData({
 
            schedule_list: resArray
-
          });
        }
      })
