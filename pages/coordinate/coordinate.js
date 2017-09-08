@@ -7,89 +7,16 @@ var iconUrl = "../../image/map-icon.png"
 var qqmapsdk;
 Page({
   data: {
-    listDatas:[
-      {
-        schoolname:"昌平西二旗",
-        address:"北京市昌平区东小口镇葫芦村",
-        id:"1",
-        dis:"7.8km"
-      },
-      {
-        schoolname: "上地",
-        address: "北京市昌平区东小口镇芦村",
-        id: "2",
-        dis: "400m"
-      },
-      {
-        schoolname: "望京",
-        address: "北京市昌平区东小口镇芦村",
-        id: "4",
-        dis: "12.6km"
-      },
-       {
-        schoolname: "国贸",
-        address: "北京市朝阳区东坝社区中心",
-        id: "3",
-        dis: "12.6km"
-      }
-    ],
-    markers: [
-      {
-        iconPath: iconUrl,
-        id: 1,
-        latitude: 40.0104100000, 
-        longitude: 116.3503500000,
-        width: 15,
-        height: 20,
-        title: "五道口",
-        callout: { 
-          content:"五道口",
-          borderRadius:5,
-          bgColor:"#ccc", 
-          padding:5,
-          display:'ALWAYS'
-          }
-      },
-      {
-        iconPath: iconUrl,
-        id: 2,
-        latitude: 40.1060400000,
-        longitude: 116.2669400000,
-        width: 15,
-        height: 20,
-        title:"昌平西二旗",
-        callout: {
-          content: "昌平西二旗",
-          borderRadius: 5,
-          bgColor: "#ccc",
-          padding: 5,
-          display: 'ALWAYS'
-        }
-      },
-      {
-        iconPath: iconUrl,
-        id: 3,
-        latitude: 39.9961200000,
-        longitude: 116.4808500000,
-        width: 15,
-        height: 20,
-        title: "望京soho",
-        callout: {
-          content: "望京soho",
-          borderRadius:5,
-          bgColor: "#ccc",
-          padding: 5,
-          display: 'ALWAYS'
-        }
-      }
-    ],
+    listDatas:[],
+    markers: [],
   },
   onReady: function (e) {
     // 使用 wx.createMapContext 获取 map 上下文
-    this.mapCtx = wx.createMapContext('myMap');
+   
     
   },
   onLoad: function () {
+    var that = this;
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
@@ -98,6 +25,61 @@ Page({
         var speed = res.speed
         var accuracy = res.accuracy
         console.log(res);
+        wx.request({
+          url: getApp().data.urlDomain + 'v1/' + latitude + '&' + longitude+'/leadmap',
+          success: function (res) {
+            console.log(res.data.result.school);
+            var mapData = res.data.result.school;
+            var listDataArr = [];
+            var markDataArr =[];
+           
+            for(var i = 0 ; i < mapData.length; i ++){
+              var map = mapData[i].location.split(",");
+
+              //假的等删除
+              map= [40.1060400000, 116.2669400000];
+
+              var objlist = {
+                schoolname: mapData[i].name,
+                address: mapData[i].address,
+                id: i+1,
+                image: mapData[i].image,
+                location: mapData[i].location,
+                gather_location: mapData[i].gather_location,
+                dis: mapData[i].distance,
+                course: mapData[i].course,
+                class_weekday: mapData[i].class_weekday,
+                class_time: mapData[i].class_time
+              }
+              var markObj={
+                iconPath: iconUrl,
+                id: i+1,
+                latitude: map[0],
+                longitude: map[1],
+                width: 15,
+                height: 20,
+                title: mapData[i].name,
+                callout: {
+                  content: mapData[i].name,
+                  borderRadius: 5,
+                  bgColor: "#ccc",
+                  padding: 5,
+                  display: 'ALWAYS'
+                }
+              }
+              console.log(map);
+              listDataArr.push(objlist);
+              markDataArr.push(markObj);
+            }
+            that.setData({
+              listDatas: listDataArr,
+              markers: markDataArr
+            })
+            console.log(that.data);
+            that.mapCtx = wx.createMapContext('myMap');
+          }
+        
+        })
       }
     })
     qqmapsdk = new QQMapWX({
@@ -169,8 +151,14 @@ Page({
       id = e.target.dataset.tab;
     }
     console.log(id);
+    console.log(this.data.listDatas);
+    var data = this.data.listDatas[id-1];
+    console.log(data);
     wx.navigateTo({
-      url: '../../pages/produce/produce?data='+id
+      url: '../../pages/produce/produce?title=' + data.schoolname
+      + '&course=' + data.course + '&image=' + data.image
+      + '&gather_location=' + data.gather_location + '&class_weekday='
+      + data.class_weekday + '&location=' + data.location
     })
     
   }

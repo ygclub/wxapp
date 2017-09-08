@@ -9,7 +9,7 @@
     <block wx:for="{{imgUrls}}"
            wx:key='swiper' >
         <swiper-item>
-      <image src="{{defUrl + '/'+ item}}" class="home-img slide-image"/>
+      <image src="{{item}}" class="home-img slide-image"/>
     </swiper-item>
     </block>
   </swiper>

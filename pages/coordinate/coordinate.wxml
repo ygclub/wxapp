@@ -9,13 +9,13 @@
           wx:key=""
           bindtap="toModule"
           data-tab="{{list.id}}">
-        <text class="school fl"   data-tab="{{list.id}}">{{list.schoolname}}</text>
+        <text class="school fl"
+              data-tab="{{list.id}}">{{list.schoolname}}</text>
         <text class="address fl"  data-tab="{{list.id}}">{{list.address}}</text>
         <text class="distance fr" data-tab="{{list.id}}">{{list.dis}}</text>
     </view>
   </view>
-  <map 
-       markers="{{markers}}"
+  <map markers="{{markers}}"
        style="width:100%;height:100%;"
        scale="10"
        bindmarkertap="toModule"
