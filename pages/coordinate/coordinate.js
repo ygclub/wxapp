@@ -3,7 +3,7 @@
 var app = getApp()
 var QQMapWX = require('../../three/qqmap-wx-jssdk.js');
 console.log(QQMapWX);
-var iconUrl = "../../image/map-icon.png"
+var iconUrl = "/image/map-icon.png"
 var qqmapsdk;
 Page({
   data: {
@@ -11,8 +11,6 @@ Page({
     markers: [],
   },
   onReady: function (e) {
-    // 使用 wx.createMapContext 获取 map 上下文
-   
     
   },
   onLoad: function () {
@@ -35,9 +33,9 @@ Page({
            
             for(var i = 0 ; i < mapData.length; i ++){
               var map = mapData[i].location.split(",");
-
+              console.log(map)
               //假的等删除
-              map= [40.1060400000, 116.2669400000];
+              // map= [40.1060400000, 116.2669400000];
 
               var objlist = {
                 schoolname: mapData[i].name,
@@ -54,8 +52,8 @@ Page({
               var markObj={
                 iconPath: iconUrl,
                 id: i+1,
-                latitude: map[0],
-                longitude: map[1],
+                latitude: map[1]-0,
+                longitude: map[0]-0,
                 width: 15,
                 height: 20,
                 title: mapData[i].name,
@@ -145,6 +143,8 @@ Page({
       }
     })
   },
+
+  //跳转项目点
   toModule:function(e){
     var id = e.markerId;
     if(!id){
@@ -155,11 +155,29 @@ Page({
     var data = this.data.listDatas[id-1];
     console.log(data);
     wx.navigateTo({
-      url: '../../pages/produce/produce?title=' + data.schoolname
+      url: '/pages/produce/produce?title=' + data.schoolname
       + '&course=' + data.course + '&image=' + data.image
       + '&gather_location=' + data.gather_location + '&class_weekday='
       + data.class_weekday + '&location=' + data.location
     })
-    
+  },
+  //分享
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '阳光地图',
+      path: '/pages/coordinate/coordinate',
+      success: function (res) {
+        // 转发成功
+        console.log(res);
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log(res);
+      }
+    }
   }
 })
