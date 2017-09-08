@@ -257,6 +257,7 @@ Page({
          })
          break;
      }
+     this.query_schedule();
      this.setData({
        schoolFlag: false,
        lessonFlag: false,
@@ -275,6 +276,34 @@ Page({
    toucheInputCanel:function(){
      this.setData({
        inputFalg: true
+     })
+   },
+   query_schedule:function(){
+     var that = this;
+     var school_condition = this.data.schoolFilter.title.indexOf("全部") != -1 ? "all" : this.data.schoolFilter.title;
+     var lesson_condition = this.data.lessonFilter.title.indexOf("全部") != -1 ? "all" : this.data.lessonFilter.title;
+     wx.request({
+       url: getApp().data.urlDomain + '/v1/query_class_schedule',
+       method: "post",
+       header: {
+         "Content-Type": "application/x-www-form-urlencoded"
+       },
+       data: json2Form({ "school": school_condition, "course": lesson_condition, "keyword": "none", "sort": this.data.intelligenFilter.id}),
+       success: function (res) {
+         
+         var schedules = res.data.result.schedule;
+         var resArray = []
+         for (var i = 0; i < schedules.length; i++) {
+
+           var item = schedules[i];
+           resArray.push(item);
+         }
+         that.setData({
+
+           schedule_list: resArray
+
+         });
+       }
      })
    }
 })
