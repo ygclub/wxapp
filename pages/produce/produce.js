@@ -54,8 +54,8 @@ Page({
               latitude: res.latitude,
               longitude: res.longitude,
             }, {
-              latitude: mapSchool[1],
-              longitude: mapSchool[0],
+              latitude: mapSchool[1]-0,
+              longitude: mapSchool[0]-0,
             }],
             color: "#FF0000DD",
             width: 2,
@@ -64,8 +64,8 @@ Page({
           markers: [{
             iconPath: iconUrl,
             id: 1,
-            latitude: mapSchool[1],
-            longitude: mapSchool[0],
+            latitude: mapSchool[1]-0,
+            longitude: mapSchool[0]-0,
             width: 15,
             height: 20,
             callout: {
@@ -79,6 +79,11 @@ Page({
         })
        
         that.mapCtx = wx.createMapContext('myMap');
+        wx.openLocation({
+          latitude: mapSchool[1]-0,
+          longitude: mapSchool[0]-0,
+          scale: 28
+        })
       }
     })
   

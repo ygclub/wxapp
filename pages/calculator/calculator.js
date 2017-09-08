@@ -180,7 +180,7 @@ Page({
     }else{
       return {
         title: '小伙伴AA',
-        path: '/pages/calculator/calcuator',
+        path: '/pages/calculator/calculator',
         success: function (res) {
           // 转发成功
           console.log("ok")
