@@ -4,6 +4,7 @@
     "pages/coordinate/coordinate",
     "pages/produce/produce",
     "pages/schedule/schedule",
+    "pages/cost/cost",
     "pages/logs/logs",
     "pages/lessonList/lession",
     "pages/index/index",

@@ -1,0 +1,80 @@
+/**index.wxss**/
+.calculator{
+  background: #efeff4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.calculator .submit{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 134rpx;
+  background: #fff;
+}
+.calculator .submit>button{
+  margin: 20rpx 40rpx;
+  border-radius:10rpx;
+}
+.calculator .submit>button.isCalculator{
+   background:#fe6700;
+  border:2rpx solid rgba(5,5,5,0.08);
+  color: #fff;
+}
+.calculator .submit>button.defult{
+  background:#f8f8f8;
+  border:2rpx solid rgba(5,5,5,0.10);
+  color: #000;
+}
+.calculator .section{
+  background: #fff;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size:30rpx;
+  padding: 24rpx 35rpx;
+}
+.calcu-money{
+  margin-bottom: 30rpx;
+  margin-top: 50rpx;
+}
+.calcu-school{
+  margin-bottom: 1rpx; 
+}
+.calculator .section .section-input{
+  position: relative;
+  height: 40rpx;
+  line-height: 40rpx; 
+}
+.calculator .section .section-input >label{
+  margin-top: 5rpx;
+}
+.calculator .section .section-input>input{
+  width: 220rpx;
+  height: 42rpx;
+  text-align: right;
+  position: absolute;
+  right: 73rpx;
+  top:50%;
+  margin-top: -21rpx;
+}
+.calcu-result{
+  margin-top: 68rpx;
+  font-size:30rpx;
+  color:#353535;
+  letter-spacing:0;
+}
+.calcu-result >.calcu-result-item{
+  padding-left: 30rpx;
+  height:98rpx;
+  line-height: 98rpx;
+}
+.calcu-result >.calcu-result-item .title{
+  text-align:right;
+  width: 182rpx;
+}
+.calcu-result >.calcu-result-item .money{
+  font-size:70rpx;
+  text-align: left;
+}

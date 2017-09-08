@@ -5,8 +5,13 @@ Page({
     result: true,
     sumbitStyle: {},
     money:{
-      people:"",
-      student:""
+      people:0,
+      student:0
+    },
+    cost:{
+      money:0,
+      people:0,
+      student:0
     },
     sumbitData:[
       {
@@ -143,6 +148,11 @@ Page({
             people: avg.toFixed(2),
             student: studentAvg.toFixed(2)
           },
+          cost: {
+            money: money ,
+            people: people,
+            student: student
+          },
           sumbitStyle: this.data.sumbitData[2],
           result: false
         })
@@ -150,10 +160,26 @@ Page({
     }
   },
   onShareAppMessage: function () {
-    return {
-      title: '本次聚餐金额',
-      path: '/page/user?id=123'
+    if(this.data.money.people && this.data.money.student)
+    {
+
+      var data = this.data;
+      console.log(111);
+      return {
+        title: '本次聚餐金额',
+        path: 'pages/cost/cost?money='+data.cost.money
+        +'&people='+data.cost.people
+        +'&student='+data.cost.student
+        +'&mStudent='+data.money.student
+        +'&mPeople='+data.money.people,
+        success: function (res) {
+          // 转发成功
+          console.log("ok")
+        },
+      }
     }
+    console.log("11`")
+    return null;
   }
 })
 
