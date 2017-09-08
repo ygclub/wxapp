@@ -18,6 +18,7 @@ Page({
   },
   onLoad: function () {
     var that = this;
+  
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
@@ -36,12 +37,19 @@ Page({
               key: key
             });
             var dis = "";
+            var arr = {}
             for(var i = 0 ; i < mapData.length; i ++){
               var map = mapData[i].location.split(",");
               var mapObj = mapData[i];
-              // latitude = 40.094891;
-              // longitude = 116.293844;
+              // latitude = 40.106039;
+              // longitude = 116.267228;
+              console.log(map);
+              
               dis = "";
+              arr = {
+                latitude: map[1] - 0,
+                longitude: map[0] - 0,
+              }
 
               var objlist = {
                 schoolname: mapObj.name,
@@ -71,144 +79,61 @@ Page({
                   display: 'ALWAYS'
                 }
               }
-
               listDataArr.push(objlist);
               markDataArr.push(markObj);
-
-              that.setData({
-                listDatas: listDataArr,
-                markers: markDataArr,
-                latitude: latitude,
-                longitude: longitude
-              })
-
-              that.mapCtx = wx.createMapContext('myMap');
-
-
-
-              // wx.request({
-              //   url: 'https://apis.map.qq.com/ws/distance/v1/?mode=walking&from='
-              //   + latitude + ',' + longitude
-              //   + '&to='+ map[1] + ','+ map[0] 
-              //   + '&key=' + key,
-              //   success: function (res) {
-                 
-              //   },
-              //   fail:function(){
-              //     dis=">=10KM";
-              //   },
-              //   complete:function(res){
-              //     if (res.data.status == 0) {
-              //       console.log(res.data.result);
-              //       var disArr = res.data.result.elements;
-              //       for (var i = 0; i < disArr.length; i++) {
-              //         var str = disArr[i].distance
-              //         if(str/1000>1){
-              //           dis = (str / 1000).toFixed(2)  +"Km"
-              //         }else {
-              //           dis = str.toFixed(2) + "m"
-              //         }
-              //       }
-              //     } else {
-              //       dis = ">10KM";
-              //     }
-              //     var req = set(mapObj, map, i, dis);
-              //     listDataArr.push(req.objlist);
-              //     markDataArr.push(req.markObj);
-
-              //     that.setData({
-              //       listDatas: listDataArr,
-              //       markers: markDataArr,
-              //       latitude: latitude,
-              //       longitude: longitude
-              //     })
-
-              //     that.mapCtx = wx.createMapContext('myMap');
-              //   }
-              // })
+              that.speed({
+                s: latitude,
+                e: longitude
+              }, arr, qqmapsdk,i);
             }
-           
-           
-
-            function set(obj, mapArr, i, disLength) {
-              console.log(obj);
-              var objlist = {
-                schoolname: obj.name,
-                address: obj.address,
-                id: i + 1,
-                image: obj.image,
-                location: obj.location,
-                gather_location: obj.gather_location,
-                dis: disLength,
-                course: obj.course,
-                class_weekday: obj.class_weekday,
-                class_time: obj.class_time
-              }
-              var markObj = {
-                iconPath: iconUrl,
-                id: i + 1,
-                latitude: mapArr[1] - 0,
-                longitude: mapArr[0] - 0,
-                width: 15,
-                height: 20,
-                title: obj.name,
-                callout: {
-                  content: obj.name,
-                  borderRadius: 5,
-                  bgColor: "#ccc",
-                  padding: 5,
-                  display: 'ALWAYS'
-                }
-              }
-              console.log(dis);
-
-              return {
-                objlist: objlist,
-                markObj: markObj
-              }
-            }
+            console.log(arr);
+            // that.speed({
+            //   s: latitude,
+            //   e: longitude
+            // }, arr, qqmapsdk);
+            that.setData({
+              listDatas: listDataArr,
+              markers: markDataArr,
+              latitude: latitude,
+              longitude: longitude
+            })
+            that.mapCtx = wx.createMapContext('myMap');
           }
         })
       }
     })
   },
 
-  speed(start,end,q){
-    console.log(start);
-    console.log(end);
- 
-    wx.request({
-      url: 'https://apis.map.qq.com/ws/distance/v1/?mode=walking&from='
-      + start.s + ',' + start.e
-      +'&to=' + end.s+','
-      + end.e +'&key=' + key,
-      success:function(res){
-        console.log(res.data);
-      }
-    })
+  speed(start,end,q,i){
 
-
-
-
-
+    var that = this;
+    var dis ="";
     q.calculateDistance({
       mode:"driving",
-      form:[{
+      from:{
         latitude: start.s,
         longitude:start.e
-      }],
-      to: [{
-        latitude: end.s,
-        longitude: end.e
-      }],
-      success: function (res) {
-        console.log(res);
       },
-      fail: function (res) {
-        console.log(res);
-      },
+      to:[end],
       complete: function (res) {
         console.log(res);
+        var getArr = that.data.listDatas;
+        if (res.status == 0 ){
+          console.log(res.result.elements);
+          dis = res.result.elements[0].distance;
+          if(dis/1000>=1){
+            dis = (dis / 1000).toFixed(2) +"Km";
+          }else {
+            dis = dis +"m";
+          }
+        }else{
+          dis = "大于10Km"
+        }
+       
+        getArr[i].dis = dis;
+        that.setData({
+          listDatas: getArr
+        })
       }
     });
   },
