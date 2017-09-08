@@ -83,7 +83,7 @@ Page({
        
         var swiperArr = [];
         for(var i = 0 ;i<swiperData.length;i++){
-          swiperArr.push({ "image": getApp().data.urlDomain + swiperData[i].image, "link": swiperData[i].link});
+          swiperArr.push({ "image": swiperData[i].image, "link": swiperData[i].link});
         }
        
         that.setData({

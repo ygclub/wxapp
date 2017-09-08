@@ -98,7 +98,6 @@ Page({
         for(var i = 0; i < schedules.length; i++){
 
           var item = schedules[i];
-          item.image = getApp().data.urlDomain+item.image;
           resArray.push(item);
         }
         that.setData({
