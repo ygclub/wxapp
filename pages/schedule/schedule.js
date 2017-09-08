@@ -33,6 +33,9 @@ Page({
     schoolFlag: false,
     lessonFlag: false,
     intelligenFlag: false,
+    lesson_arrow:"../../image/icon-down.png",
+    school_arrow: "../../image/icon-down.png",
+    intelligen_arrow: "../../image/icon-down.png",
     bgdisplayclass: ".school-list .hidebg",
     dataType:1
   },
@@ -81,6 +84,9 @@ Page({
       schoolFilter: {title:"全部项目点",id:0},
       lessonFilter: {title:"全部课程",id:0},
       intelligenFilter: this.data.intelligenData[0],
+      lesson_arrow: "../../image/icon-down.png",
+      school_arrow: "../../image/icon-down.png",
+      intelligen_arrow: "../../image/icon-down.png"
     })
 
     //query schedule  by default
@@ -110,12 +116,25 @@ Page({
     })
 
   },
+
+  
+
   filterList:function(e){
     console.log(e)
     var type = e.target.dataset.type;
     console.log(type);
     switch(type-0){
       case 1:
+        if (this.data.schoolFlag) {
+          this.setData({
+            schoolFlag: false,
+            bgdisplayclass: "hidebg",
+            lesson_arrow: "../../image/icon-down.png",
+            school_arrow: "../../image/icon-down.png",
+            intelligen_arrow: "../../image/icon-down.png",
+          })
+          return;
+        }
         console.log(this.data.schoolFilter.title);
         var itemDatas = []
         for (var i = 0; i < this.data.schoolData.length;i++){
@@ -135,11 +154,24 @@ Page({
           lessonFlag: false,
           intelligenFlag: false,
           bgdisplayclass: "displaybg",
+          lesson_arrow: "../../image/icon-down.png",
+          school_arrow: "../../image/icon-up.png",
+          intelligen_arrow: "../../image/icon-down.png",
           schoolData:itemDatas,
           dataType:1
         })
         break;
       case 2:
+        if (this.data.lessonFlag) {
+          this.setData({
+            lessonFlag: false,
+            bgdisplayclass: "hidebg",
+            lesson_arrow: "../../image/icon-down.png",
+            school_arrow: "../../image/icon-down.png",
+            intelligen_arrow: "../../image/icon-down.png",
+          })
+          return;
+        }
         var itemDatas = []
         for (var i = 0; i < this.data.lessonData.length; i++) {
           var item = this.data.lessonData[i];
@@ -158,11 +190,24 @@ Page({
           lessonFlag: true,
           intelligenFlag: false,
           bgdisplayclass: "displaybg",
+          lesson_arrow: "../../image/icon-up.png",
+          school_arrow: "../../image/icon-up.png",
+          intelligen_arrow: "../../image/icon-down.png",
           lessonData:itemDatas,
           dataType:2
         })
         break;
       case 3:
+        if (this.data.intelligenFlag) {
+          this.setData({
+            intelligenFlag: false,
+            bgdisplayclass: "hidebg",
+            lesson_arrow: "../../image/icon-down.png",
+            school_arrow: "../../image/icon-up.png",
+            intelligen_arrow: "../../image/icon-down.png",
+          })
+          return;
+        }
         var itemDatas = []
         for (var i = 0; i < this.data.intelligenData.length; i++) {
           var item = this.data.intelligenData[i];
@@ -181,6 +226,9 @@ Page({
           lessonFlag: false,
           intelligenFlag: true,
           bgdisplayclass: "displaybg",
+          lesson_arrow: "../../image/icon-down.png",
+          school_arrow: "../../image/icon-up.png",
+          intelligen_arrow: "../../image/icon-up.png",
           intelligenData:itemDatas,
           dataType:3
         })
@@ -213,7 +261,10 @@ Page({
        schoolFlag: false,
        lessonFlag: false,
        intelligenFlag: false,
-       bgdisplayclass: "hidebg"
+       bgdisplayclass: "hidebg",
+       lesson_arrow: "../../image/icon-down.png",
+       school_arrow: "../../image/icon-down.png",
+       intelligen_arrow: "../../image/icon-down.png",
      })
    },
    toucheInput:function(){
