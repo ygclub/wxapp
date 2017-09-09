@@ -32,6 +32,7 @@ Page({
             var mapData = res.data.result.school;
             var listDataArr = [];
             var markDataArr =[];
+            var leader_phone = res.data.result.phone;
 
             qqmapsdk = new QQMapWX({
               key: key
@@ -57,6 +58,8 @@ Page({
                 id: i + 1,
                 image: mapObj.image,
                 location: mapObj.location,
+                phone:mapObj.phone,
+                contactor: mapObj.contactor,
                 gather_location: mapObj.gather_location,
                 dis: "计算中...",
                 course: mapObj.course,
@@ -91,7 +94,8 @@ Page({
               listDatas: listDataArr,
               markers: markDataArr,
               latitude: latitude,
-              longitude: longitude
+              longitude: longitude,
+              phone:leader_phone
             })
             that.mapCtx = wx.createMapContext('myMap');
           }
@@ -148,7 +152,7 @@ Page({
       url: '/pages/produce/produce?title=' + data.schoolname
       + '&course=' + data.course + '&image=' + data.image
       + '&gather_location=' + data.gather_location + '&class_weekday='
-      + data.class_weekday + '&location=' + data.location
+      + data.class_weekday + '&location=' + data.location + '&phone=' + data.phone + '&contactor=' + data.contactor
     })
   },
   //分享
