@@ -75,8 +75,10 @@ Page({
             callout: {
               content: "点我为您导航去项目点",
               borderRadius: 5,
-              bgColor: "#ccc",
+              bgColor: "#ffffff",
               padding: 5,
+              color:"#333333",
+              fontSize: 13,
               display: 'ALWAYS'
             }
           }],
@@ -110,7 +112,10 @@ Page({
           callout: {
             content: "点我为您导航去项目点",
             borderRadius: 5,
-            bgColor: "#ccc",
+            bgColor: "#ffffff",
+            padding: 5,
+            color: "#333333",
+            fontSize: 13,
             padding: 5,
             display: 'ALWAYS'
           }
@@ -145,7 +150,10 @@ Page({
           callout: {
             content: "点我为您导航去集合点",
             borderRadius: 5,
-            bgColor: "#ccc",
+            bgColor: "#ffffff",
+            padding: 5,
+            color: "#333333",
+            fontSize: 13,
             padding: 5,
             display: 'ALWAYS'
           }
@@ -204,7 +212,7 @@ Page({
       active: 0,
     })
     wx.makePhoneCall({
-      phoneNumber: phone //仅为示例，并非真实的电话号码
+      phoneNumber: phone 
     })
   },
   //分享

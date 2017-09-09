@@ -14,8 +14,8 @@
   width: 100%;
 }
 .coordinate-school>.coordinate-school-item{
-  height: 25rpx;
-  line-height: 25rpx; 
+  height: 28rpx;
+  line-height: 28rpx; 
   padding:35rpx 0 35rpx 0;
   margin-left: 30rpx;
   margin-right: 32rpx;
@@ -23,20 +23,20 @@
 }
 
 .coordinate-school-item> .school{
-  font-size:26rpx;
+  font-size:28rpx;
   color:#353535;
   letter-spacing:0;
   text-align:left;
   margin-right: 21rpx;
 }
 .coordinate-school-item> .address{
-  font-size:22rpx;
+  font-size:24rpx;
   color:#999999;
   letter-spacing:0;
   text-align:left;
 }
 .coordinate-school-item> .distance{
-  font-size:18rpx;
+  font-size:24rpx;
   color:#666666;
   letter-spacing:0;
   text-align:right;

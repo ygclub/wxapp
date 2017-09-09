@@ -78,8 +78,11 @@ Page({
                 callout: {
                   content: mapObj.name,
                   borderRadius: 5,
-                  bgColor: "#ccc",
+                  bgColor: "#ffffff",
                   padding: 5,
+                  color: "#333333",
+                  padding: 5,
+                  fontSize:13,
                   display: 'ALWAYS'
                 }
               }
@@ -110,7 +113,7 @@ Page({
     var that = this;
     var dis ="";
     q.calculateDistance({
-      mode:"driving",
+      mode:"walking",
       from:{
         latitude: start.s,
         longitude:start.e
