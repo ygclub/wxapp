@@ -60,6 +60,7 @@ Page({
                 location: mapObj.location,
                 phone:mapObj.phone,
                 contactor: mapObj.contactor,
+                class_time:mapObj.class_time,
                 gather_location: mapObj.gather_location,
                 dis: "计算中...",
                 course: mapObj.course,
@@ -152,7 +153,7 @@ Page({
       url: '/pages/produce/produce?title=' + data.schoolname
       + '&course=' + data.course + '&image=' + data.image
       + '&gather_location=' + data.gather_location + '&class_weekday='
-      + data.class_weekday + '&location=' + data.location + '&phone=' + data.phone + '&contactor=' + data.contactor
+      + data.class_weekday + '&location=' + data.location + '&phone=' + data.phone + '&contactor=' + data.contactor + '&class_time=' + data.class_time
     })
   },
   //分享

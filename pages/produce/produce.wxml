@@ -9,7 +9,7 @@
       <view class="school-info fl">
         <view class="info-shcool">{{schoolData.title}}</view>
         <view class="info-class">{{schoolData.course}}</view>
-        <view class="info-time">{{schoolData.class_weekday}}{{schoolData.class_time}}上课</view>
+        <view class="info-time">{{schoolData.class_weekday}} {{schoolData.class_time}} 上课</view>
       </view>
     </view>
     <view class="button clearfix">
