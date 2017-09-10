@@ -7,7 +7,8 @@ Page({
     imgSrc:img,
     login:false,
     user_nickname:"未登录",
-    user_avatar:img
+    user_avatar:img,
+    ver:false
   },
   onLoad: function () {
     var user = app.data.user;

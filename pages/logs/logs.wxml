@@ -5,7 +5,7 @@
       <image class="fl"  src="{{user_avatar}}"></image>
       <text class="fl">{{user_nickname}}</text>
     </view>
-    <view wx:if="{{login}}"
+    <view wx:if="{{login&& ver}}"
           class="item  list border-botton">
       <view class="list-first clearfix"
            bindtap="toPage"
@@ -20,7 +20,7 @@
                src="../../image/icon-right.png"></image>
       </view>
     </view>
-    <view wx:if="{{login}}"
+    <view wx:if="{{login&& ver}}"
           class="item  list marb clearfix"
           bindtap="toPage"
           data-id="1">
