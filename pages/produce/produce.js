@@ -84,12 +84,12 @@ Page({
           }],
         })
        
-        that.mapCtx = wx.createMapContext('myMap');
-        wx.openLocation({
-          latitude: mapSchool[1]-0,
-          longitude: mapSchool[0]-0,
-          scale: 28
-        })
+        // that.mapCtx = wx.createMapContext('myMap');
+        // wx.openLocation({
+        //   latitude: mapSchool[1]-0,
+        //   longitude: mapSchool[0]-0,
+        //   scale: 28
+        // })
       }
     })
   
