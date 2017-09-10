@@ -62,7 +62,7 @@ Page({
     if (that.data.lesson.plan.content == "<p>主讲还未发布课程提纲</p>"){
       wx.showToast({
         title: '没有提纲发布',
-        icon: 'failed',
+        icon: 'loading',
         duration: 2000
       });
       return; 
