@@ -1,0 +1,103 @@
+/* pages/produce/produce.wxss */
+.lessonDetail{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.lessonDetail-item{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 305rpx;
+  background: #fff;
+  z-index: 999999；
+}
+.lessonDetail-item .lesson{
+  height: 177rpx;
+  width: 100%;
+  padding-top: 34rpx;
+}
+.lessonDetail-item .button{
+  height: 94rpx;
+  width: 100%;
+  border-top: 1rpx solid #ccc;
+}
+.lessonDetail-item .lesson-image>image{
+  background:#d8d8d8;
+  border-radius:6rpx;
+  width:140rpx;
+  height:148rpx;
+  margin-left: 30rpx;
+}
+.lessonDetail-item .lesson-info {
+  letter-spacing:0;
+  text-align:left;
+  margin-left: 37rpx;
+}
+.lessonDetail-item .lesson-info >.info-lesson{
+  font-size:32rpx;
+  color:#353535;
+  margin-bottom: 21rpx;
+  margin-top: 8rpx;
+}
+.lessonDetail-item .lesson-info >.info-class{
+  font-size:26rpx;
+  color:#666666;
+  margin-bottom: 21rpx;
+}
+.lessonDetail-item .lesson-info >.info-time{
+  font-size:26rpx;
+  color:#353535;
+}
+.lessonDetail-item .button-detailAction{
+  font-size:26rpx;
+  color:#457625;
+  letter-spacing:0;
+  text-align:center;
+  line-height: 94rpx;
+  width:232rpx;
+  height:94rpx;
+  float: right;
+}
+
+.lessonDetail-item .plan_contain{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  margin-top: 34rpx;
+  padding-bottom: 100rpx;
+  height: 600rpx;
+}
+.lessonDetail-item .plan_contain .plan{
+  left: 20rpx;
+  font-size:26rpx;
+  color:#353535;
+  letter-spacing:0;
+  line-height:46rpx;
+  text-align:justify;
+  text-justify:distribute-all-lines；
+}
+.lessonDetail-item .action_bar{
+  margin-bottom: 60rpx;
+  width: 100%;
+}
+
+.action_bar>button{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  border-radius:10rpx;
+  background:#f8f8f8;
+  border:2rpx solid rgba(5,5,5,0.10);
+  color: #000;
+}
+.lessonDetail-item .button-detailAction.active{
+  background:#E6E6E6;
+}
+.lessonDetail-item .button-classplan{
+
+}
+.lessonDetail-item .button-afterclass{
+
+}
