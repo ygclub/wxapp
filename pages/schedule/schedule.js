@@ -310,6 +310,15 @@ Page({
    upper_refresh:function(){
       this.query_schedule(); 
    },
+   toClassDetail:function(e){
+      console.log(e);
+      var classId = e.currentTarget.id;//semester_school_class_classNumber
+      wx.navigateTo({
+        url: '/pages/lessonDetail/lessonDetail?id='+classId
+      })
+      
+
+   },
    query_schedule:function(){
      var that = this;
      var school_condition = this.data.schoolFilter.title.indexOf("全部") != -1 ? "all" : this.data.schoolFilter.title;

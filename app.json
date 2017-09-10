@@ -11,7 +11,8 @@
     "pages/calculator/calculator",
     "pages/afterClass/afterClass",
     "pages/about/about",
-    "pages/author/author"
+    "pages/author/author",
+    "pages/lessonDetail/lessonDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
