@@ -1,6 +1,7 @@
 <!--logs.wxml-->
 <view class="my-home">
-    <view class="item  user clearfix">
+    <view class="item  user clearfix"
+       bindtap="loginIn">
       <image class="fl"  src="{{user_avatar}}"></image>
       <text class="fl">{{user_nickname}}</text>
     </view>
@@ -50,4 +51,7 @@
              data-id="3"
              src="../../image/icon-right.png"></image>
     </view>
+    <view class="loginOut"
+          wx:if="{{login}}"
+          bindtap="loginOut">退出登录</view>
 </view>

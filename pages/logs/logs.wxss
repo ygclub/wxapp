@@ -77,3 +77,16 @@
 .border-botton{
   border-bottom: 1rpx solid #ccc;
 }
+.loginOut{
+  position:absolute;
+  bottom:30rpx;
+  left:80rpx;
+  right:80rpx;
+  height:80rpx;
+  line-height:80rpx;
+  border-radius:15rpx;
+  background:#477926;
+  text-align:center;
+  color:#fff;
+  font-size:30rpx;
+}
