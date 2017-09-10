@@ -19,7 +19,7 @@
        <navigator url="#" open-type="navigate">
          <swiper-item>
           <view class="clearfix">
-            <text class="title fl">[阳光快报]</text>
+            <text class="title fl">[{{item.newType}}]</text>
             <text class="content fl">#{{item.news}}</text>
              </view>
          </swiper-item>

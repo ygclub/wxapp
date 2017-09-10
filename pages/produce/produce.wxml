@@ -9,17 +9,22 @@
       <view class="school-info fl">
         <view class="info-shcool">{{schoolData.title}}</view>
         <view class="info-class">{{schoolData.course}}</view>
-        <view class="info-time">{{schoolData.class_weekday}}{{schoolData.class_time}}上课</view>
+        <view class="info-time">{{schoolData.class_weekday}} {{schoolData.class_time}} 上课</view>
       </view>
     </view>
     <view class="button clearfix">
+   
       <view class="button-toSchool button-toAggregate {{active=='1'? 'active' : ''}}"
             data-type="1"
-            bindtap="toSchool">前往项目点</view>
+            bindtap="toSchool">导航去项目点</view>
       <view class="button-toSchool button-toProduce {{active=='2'? 'active' : ''}}"
             data-type="2"
-            bindtap="toSchool">前往集合点</view>
+            bindtap="toSchool">导航去集合点</view>
+           <view class="button-toSchool button-toAggregate {{active=='0'? 'active' : ''}}"
+            data-type="0"
+            bindtap="callContactor">联系负责人{{contactor}}</view>  
     </view>
+    
   </view>
   <map id="map" 
        scale="11"

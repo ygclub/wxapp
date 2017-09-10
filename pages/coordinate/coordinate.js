@@ -32,6 +32,7 @@ Page({
             var mapData = res.data.result.school;
             var listDataArr = [];
             var markDataArr =[];
+            var leader_phone = res.data.result.phone;
 
             qqmapsdk = new QQMapWX({
               key: key
@@ -57,6 +58,9 @@ Page({
                 id: i + 1,
                 image: mapObj.image,
                 location: mapObj.location,
+                phone:mapObj.phone,
+                contactor: mapObj.contactor,
+                class_time:mapObj.class_time,
                 gather_location: mapObj.gather_location,
                 dis: "计算中...",
                 course: mapObj.course,
@@ -74,8 +78,11 @@ Page({
                 callout: {
                   content: mapObj.name,
                   borderRadius: 5,
-                  bgColor: "#ccc",
+                  bgColor: "#ffffff",
                   padding: 5,
+                  color: "#333333",
+                  padding: 5,
+                  fontSize:13,
                   display: 'ALWAYS'
                 }
               }
@@ -91,7 +98,8 @@ Page({
               listDatas: listDataArr,
               markers: markDataArr,
               latitude: latitude,
-              longitude: longitude
+              longitude: longitude,
+              phone:leader_phone
             })
             that.mapCtx = wx.createMapContext('myMap');
           }
@@ -105,7 +113,7 @@ Page({
     var that = this;
     var dis ="";
     q.calculateDistance({
-      mode:"driving",
+      mode:"walking",
       from:{
         latitude: start.s,
         longitude:start.e
@@ -148,7 +156,7 @@ Page({
       url: '/pages/produce/produce?title=' + data.schoolname
       + '&course=' + data.course + '&image=' + data.image
       + '&gather_location=' + data.gather_location + '&class_weekday='
-      + data.class_weekday + '&location=' + data.location
+      + data.class_weekday + '&location=' + data.location + '&phone=' + data.phone + '&contactor=' + data.contactor + '&class_time=' + data.class_time
     })
   },
   //分享

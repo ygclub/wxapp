@@ -14,6 +14,8 @@ Page({
     markers: [],
     polyline: [],
     controls: [],
+    phone:"",
+    contactor:"",
     gather_locationX:"",
     gather_locationY:"",
     school_locationX:"",
@@ -28,11 +30,13 @@ Page({
     
     var mapSchool = options.location.split(",");
     var mapGather = options.gather_location.split(",");
-
+    
     // mapSchool = [40.1060400000, 116.2669400000];
     // mapGather = [40.1060400000, 116.2669400000];
     this.setData({
       schoolData: options,
+      phone: options.phone,
+      contactor:options.contactor,
       gather_locationX: mapGather[1]-0,
       gather_locationY: mapGather[0]-0,
       school_locationX: mapSchool[1]-0,
@@ -71,8 +75,10 @@ Page({
             callout: {
               content: "点我为您导航去项目点",
               borderRadius: 5,
-              bgColor: "#ccc",
+              bgColor: "#ffffff",
               padding: 5,
+              color:"#333333",
+              fontSize: 13,
               display: 'ALWAYS'
             }
           }],
@@ -106,7 +112,10 @@ Page({
           callout: {
             content: "点我为您导航去项目点",
             borderRadius: 5,
-            bgColor: "#ccc",
+            bgColor: "#ffffff",
+            padding: 5,
+            color: "#333333",
+            fontSize: 13,
             padding: 5,
             display: 'ALWAYS'
           }
@@ -141,7 +150,10 @@ Page({
           callout: {
             content: "点我为您导航去集合点",
             borderRadius: 5,
-            bgColor: "#ccc",
+            bgColor: "#ffffff",
+            padding: 5,
+            color: "#333333",
+            fontSize: 13,
             padding: 5,
             display: 'ALWAYS'
           }
@@ -192,6 +204,15 @@ Page({
           })
         }
       }
+    })
+  },
+  callContactor:function(){
+    var phone = this.data.phone;
+    this.setData({
+      active: 0,
+    })
+    wx.makePhoneCall({
+      phoneNumber: phone 
     })
   },
   //分享

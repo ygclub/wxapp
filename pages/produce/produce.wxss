@@ -63,7 +63,7 @@
   float: right;
 }
 .produce-item .button-toSchool.active{
-  background:#fafafa;
+  background:#E6E6E6;
 }
 .produce-item .button-toProduce{
 

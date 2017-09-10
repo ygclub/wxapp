@@ -122,7 +122,8 @@ Page({
         var newRes = []
         for(var i = 0; i < newsArray.length; i++){
           var content = newsArray[i].content;
-          var item = {url:"#",news:content};
+          var newType = newsArray[i].type;
+          var item = { url: "#", news: content, newType: newType};
           newRes.push(item);
        }
        that.setData({

@@ -45,14 +45,14 @@
   border: none;
 }
 .version-index .version-title{
-  font-size: 36rpx;
-  color: #194e9e;
+  font-size: 24rpx;
+  color: #353535;
 }
 .version-index .version-time{
-  color: #ccc;
+  color: #bab1b1;
 }
 .version-index .version-text{
-  color: #194e9e;
+  color: #353530;
   font-size: 24rpx;
 }
 .user{
@@ -63,9 +63,9 @@
   width:100%;
 }
 .user .content-item{
-  width:120rpx;
+  width:90rpx;
   text-align:center;
-  padding:0 15rpx;
+  padding:0 20rpx;
 
 }
 .user .content-item>image{
@@ -77,11 +77,12 @@
   margin: 0 auto;
 }
 .user .content-item>view{
-  width:120rpx;
+  width:100rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 auto;
+  margin-top: 16rpx;
 }
 .margin-botton{
   margin-bottom: 120rpx;
