@@ -8,22 +8,25 @@
       </view>
       <view class="lesson-info fl">
         <view class="info-lesson">{{lesson.class.course}}</view>
-        <view class="info-class">{{lesson.class.school}}(主讲:{{lesson.class.teacher}})</view>
-        <view class="info-time">{{lesson.class.date}} {{lesson.class.timerange}} 上课</view>
+        <view class="info-class">{{lesson.class.semester}} {{lesson.class.school}} 第{{lesson.class.class_number}}次课 </view>
+        <view class="info-time">{{lesson.class.date}} {{lesson.class.timerange}} {{lesson.class.teacher}}</view>
       </view>
     </view>
     <view class="button clearfix">
    
       <view class="button-detailAction button-afterclass {{active=='1'? 'active' : ''}}"
             data-type="1"
-            bindtap="toSchool">课后十分钟</view>
+            bindtap="toAfterClass">课后十分钟</view>
       <view class="button-detailAction button-classplan {{active=='2'? 'active' : ''}}"
             data-type="2"
-            bindtap="toSchool">课程提纲</view>  
+            bindtap="showClassPlan">课程提纲</view>  
     </view>
-    
+    <scroll-view class="plan_contain">
+  <rich-text class="plan" nodes="{{lesson.plan.content}}"></rich-text>
+  </scroll-view>
+  <view class="action_bar">
+   <button bindtap='copy_plan'>复制提纲</button>
   </view>
-  <view>
-  test
   </view>
+  
 </view>

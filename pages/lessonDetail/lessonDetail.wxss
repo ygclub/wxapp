@@ -62,6 +62,36 @@
   height:94rpx;
   float: right;
 }
+
+.lessonDetail-item .plan_contain{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  margin-top: 34rpx;
+  padding-bottom: 100rpx;
+  height: 600rpx;
+}
+.lessonDetail-item .plan_contain .plan{
+  left: 20rpx;
+  font-size:26rpx;
+  color:#353535;
+  letter-spacing:0;
+  line-height:46rpx;
+  text-align:justify;
+  text-justify:distribute-all-lines；
+}
+.lessonDetail-item .action_bar{
+  margin-bottom: 60rpx;
+  width: 100%;
+}
+
+.action_bar>button{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  border-radius:10rpx;
+  background:#f8f8f8;
+  border:2rpx solid rgba(5,5,5,0.10);
+  color: #000;
+}
 .lessonDetail-item .button-detailAction.active{
   background:#E6E6E6;
 }

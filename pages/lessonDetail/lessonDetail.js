@@ -6,7 +6,7 @@ Page({
    */
   
   data: {
-    active:1,
+    active:2,
     classId:"",
     lesson:null
 
@@ -33,11 +33,54 @@ Page({
       },
       data: json2Form({ "school": info[1], "class_name": info[2], "semester": info[0], "class_number": info[3] }),
       success: function (res) {
+        
+        console.log(res.data.result.plan.content);
+        if (res.data.result.plan.content == ""){
+          res.data.result.plan.content = "<p>主讲还未发布课程提纲</p>";
+        }else{
+          res.data.result.plan.content = "<p><h3>提纲:</h3></p>" + res.data.result.plan.content;
+        }
         that.setData({
           lesson: res.data.result
         });
       }
 
+    })
+  },
+  toAfterClass:function(){
+    wx.showModal({
+      title: 'LEAD阳光提示',
+      content: '课后十分钟暂未开放，请耐心等待 ：）',
+      confirmText:"知道了",
+      cancelText:"好的",
+      success: function (res) {
+      }
+    })  
+  },
+  copy_plan:function(){
+    var that = this;
+    if (that.data.lesson.plan.content == "<p>主讲还未发布课程提纲</p>"){
+      wx.showToast({
+        title: '没有提纲发布',
+        icon: 'failed',
+        duration: 2000
+      });
+      return; 
+    }
+    wx.setClipboardData({
+      data: that.data.lesson.plan.content,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            //  
+            wx.showToast({
+              title: '提纲复制成功',
+              icon: 'success',
+              duration: 2000
+            }) 
+          }
+        })
+      }
     })
   }
 })

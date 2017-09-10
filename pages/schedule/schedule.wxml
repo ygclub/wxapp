@@ -75,7 +75,7 @@
     <view class="{{bgdisplayclass}}"></view>
     <scroll-view scroll-y="true" style="height:1024rpx" bindscrolltolower="lower"  bindscrolltoupper="upper_refresh"> 
     <view class="lesson-list clearfix" wx:for="{{schedule_list}}" wx:key="">
-        <image src="{{item.image}}"></image>
+        <image src="{{item.image}}"bindtap='toClassDetail' id="{{item.semester}}_{{item.school}}_{{item.course}}_{{item.class_number}}"></image>
         <view class="lesson-list-text" bindtap='toClassDetail' id="{{item.semester}}_{{item.school}}_{{item.course}}_{{item.class_number}}">
             <text class="className">{{item.course}}</text>
             <text class="classCount">{{item.semester}}第{{item.class_number}}次/{{item.teacher}}</text>
