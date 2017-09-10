@@ -78,7 +78,7 @@ Page({
                 callout: {
                   content: mapObj.name,
                   borderRadius: 5,
-                  bgColor: "#ffffff",
+                  bgColor: "#d3d3d3",
                   padding: 5,
                   color: "#333333",
                   padding: 5,
