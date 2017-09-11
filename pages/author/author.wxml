@@ -3,9 +3,9 @@
 <view class="container about-lead">
   <view class="wx">
     <view class="title">
-      <text>联系方式</text>
+      <text>联系我们</text>
     </view>
-    <view class="content t-c margin-botton">电子邮箱: ygclub.cs@ygclub.org</view>
+    <view class="content t-c margin-botton">邮箱: ygclub.cs@ygclub.org</view>
     <view class="title">
       <text>团队成员</text>
     </view>
