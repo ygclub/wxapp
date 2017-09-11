@@ -1,5 +1,7 @@
 //index.js
 //获取应用实例
+
+var app = getApp();
 Page({
   data: { 
     inputFalg:true,
@@ -98,7 +100,7 @@ Page({
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      data: json2Form({"school":"all","course":"all","keyword":"none","sort":-1}),
+      data: app.json2Form({"school":"all","course":"all","keyword":"none","sort":-1}),
       success:function(res){
 
         var schedules = res.data.result.schedule;
@@ -330,7 +332,7 @@ Page({
        header: {
          "Content-Type": "application/x-www-form-urlencoded"
        },
-       data: json2Form({ "school": school_condition, "course": lesson_condition, "keyword": search_key, "sort": this.data.intelligenFilter.id}),
+       data: app.json2Form({ "school": school_condition, "course": lesson_condition, "keyword": search_key, "sort": this.data.intelligenFilter.id}),
        success: function (res) {
         
          var schedules = res.data.result.schedule;
@@ -348,10 +350,10 @@ Page({
      })
    }
 })
-function json2Form(json) {
-  var str = [];
-  for (var p in json) {
-    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));
-  }
-  return str.join("&");
-}
+// function json2Form(json) {
+//   var str = [];
+//   for (var p in json) {
+//     str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));
+//   }
+//   return str.join("&");
+// }

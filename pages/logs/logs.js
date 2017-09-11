@@ -12,6 +12,7 @@ Page({
   },
   onLoad: function () {
     var user = app.data.user;
+    var that = this;
     console.log(user);
     if(user){
       this.setData({
@@ -21,24 +22,44 @@ Page({
       });
     }else {
      //弹出登录
-
-      wx.getSetting({
-        success(res) {
-          console.log(res);
-          if (!res.authSetting['scope.record']) {
-            wx.authorize({
-              scope: 'scope.userInfo',
-              success(res) {
+      wx.login({
+        success: function (res) {
+          var code = res.code;
+          if(code)
+          {
+            wx.getUserInfo({
+              success: function (res) {
                 console.log(res);
-
+                that.data.user = res.userInfo;
+                var name = res.userInfo;
+                console.log(name);
+                that.setData({
+                  user_nickname: name.nickName,
+                  user_avatar: name.avatarUrl,
+                })
+                wx.request({
+                  url: app.data.urlDomain + 'v1/regist',
+                  method: "POST",
+                  header: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                  },
+                  data: app.json2Form({
+                    "uid": code,
+                    "nickname": name.nickName
+                  }),
+                  success: function (res) {
+                    console.log(res);
+                  }
+                })
               },
-              complete:function(res){
+              fail: function (res) {
                 console.log(res);
               }
             })
-          }
+          }      
         }
-      })
+    })
+
     }
   },
   loginIn(){
@@ -53,7 +74,11 @@ Page({
             wx.getUserInfo({
               success: function (res) {
                 console.log(res);
-                that.data.user = res.userInfo
+                that.data.user = res.userInfo;
+                that.setData({
+                  user_nickname: res.userInfo.nickName,
+                  user_avatar: res.userInfo.avatarUrl,
+                })
               },
               fail: function (res) {
                 console.log(res);
@@ -64,22 +89,6 @@ Page({
           }
         }
       });
-      wx.getSetting({
-        success(res) {
-          console.log(res);
-          if (!res.authSetting['scope.record']) {
-            wx.authorize({
-              scope: 'scope.userInfo',
-              success(res) {
-                console.log(res);
-              },
-              complete: function (res) {
-                console.log(res);
-              }
-            })
-          }
-        }
-      })
     }
   },
   loginOut(){
