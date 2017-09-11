@@ -17,6 +17,7 @@
   margin-top: 13rpx;
   margin-left: 16rpx;
   margin-right: 16rpx;
+  position: relative;
 }
 .schedule .touched{
   background:#f0eff5;
@@ -28,10 +29,13 @@
   position: relative;
 }
 .schedule .no-touched .no-touched-input{
-  width: 88rpx;
-  margin: 10rpx auto;
+  width:100rpx;
   height: 30rpx;
   padding-top:  7rpx;
+  position: absolute;
+  left: 50%;
+  top: 10rpx;
+      transform:translateX(-50%);
 }
 .no-touched-input image{
   width: 26rpx;
