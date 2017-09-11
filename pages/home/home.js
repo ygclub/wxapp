@@ -12,9 +12,9 @@ Page({
     circular:true,
     hometab:[
       {
-        image:"/image/after-class-icon.png",
-        title:"课后十分钟",
-        toPage:"0"
+        image: "/image/calculator-icon.png",
+        title: "小伙伴AA",
+        toPage: "2"
       },
       {
         image: "/image/coordinate-icon.png",
@@ -22,14 +22,13 @@ Page({
         toPage: "1"
       },
       {
-        image: "/image/calculator-icon.png",
-        title: "小伙伴AA", 
-        toPage: "2"
-      },
-      {
         image: "/image/schedule-icon.png",
         title: "课程表",
         toPage: "3"
+      }, {
+        image: "/image/after-class-icon.png",
+        title: "课后十分钟",
+        toPage: "0"
       }
     ]
   },

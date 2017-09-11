@@ -22,3 +22,8 @@
 .about-lead .content .other{
   color: #888;
 }
+.about-lead image{
+  width: 100%;
+  height: auto;
+  display: block;
+}

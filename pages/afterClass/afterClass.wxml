@@ -1,4 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-  课后十分钟
+      <view>暂时还没有上传课后十分钟的活动</view>
+      <image src='/def-img/xboy.png'></image>
 </view>
