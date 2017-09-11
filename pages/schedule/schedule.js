@@ -35,12 +35,16 @@ Page({
     schoolFlag: false,
     lessonFlag: false,
     intelligenFlag: false,
+    school_filter_touch:false,
+    lesson_filter_touch:false,
+    intelligen_filter_touch:false,
     lesson_arrow:"../../image/icon-down.png",
     school_arrow: "../../image/icon-down.png",
     intelligen_arrow: "../../image/icon-down.png",
     bgdisplayclass: ".school-list .hidebg",
     dataType:1,
     search_key:"none",
+    
   },
   //事件处理函数
   onShow: function () {
@@ -148,6 +152,7 @@ Page({
         if (this.data.schoolFlag) {
           this.setData({
             schoolFlag: false,
+            school_filter_touch: false,
             bgdisplayclass: "hidebg",
             lesson_arrow: "../../image/icon-down.png",
             school_arrow: "../../image/icon-down.png",
@@ -173,6 +178,9 @@ Page({
           schoolFlag: true,
           lessonFlag: false,
           intelligenFlag: false,
+          school_filter_touch: true,
+          lesson_filter_touch: false,
+          intelligen_filter_touch: false,
           bgdisplayclass: "displaybg",
           lesson_arrow: "../../image/icon-down.png",
           school_arrow: "../../image/icon-up.png",
@@ -185,6 +193,7 @@ Page({
         if (this.data.lessonFlag) {
           this.setData({
             lessonFlag: false,
+            lesson_filter_touch: false,
             bgdisplayclass: "hidebg",
             lesson_arrow: "../../image/icon-down.png",
             school_arrow: "../../image/icon-down.png",
@@ -209,6 +218,9 @@ Page({
           schoolFlag:false,
           lessonFlag: true,
           intelligenFlag: false,
+          school_filter_touch: false,
+          lesson_filter_touch: true,
+          intelligen_filter_touch: false,
           bgdisplayclass: "displaybg",
           lesson_arrow: "../../image/icon-up.png",
           school_arrow: "../../image/icon-down.png",
@@ -221,6 +233,7 @@ Page({
         if (this.data.intelligenFlag) {
           this.setData({
             intelligenFlag: false,
+            intelligen_filter_touch: false,
             bgdisplayclass: "hidebg",
             lesson_arrow: "../../image/icon-down.png",
             school_arrow: "../../image/icon-down.png",
@@ -245,6 +258,9 @@ Page({
           schoolFlag: false,
           lessonFlag: false,
           intelligenFlag: true,
+          school_filter_touch: false,
+          lesson_filter_touch: false,
+          intelligen_filter_touch: true,
           bgdisplayclass: "displaybg",
           lesson_arrow: "../../image/icon-down.png",
           school_arrow: "../../image/icon-down.png",
@@ -282,6 +298,9 @@ Page({
        schoolFlag: false,
        lessonFlag: false,
        intelligenFlag: false,
+       school_filter_touch: false,
+       lesson_filter_touch: false,
+       intelligen_filter_touch: false,
        bgdisplayclass: "hidebg",
        lesson_arrow: "../../image/icon-down.png",
        school_arrow: "../../image/icon-down.png",

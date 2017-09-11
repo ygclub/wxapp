@@ -131,7 +131,7 @@ Page({
             dis = dis +"m";
           }
         }else{
-          dis = "大于10ksm"
+          dis = "大于10km"
         }
        
         getArr[i].dis = dis;

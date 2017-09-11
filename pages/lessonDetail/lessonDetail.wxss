@@ -40,13 +40,14 @@
 .lessonDetail-item .lesson-info >.info-lesson{
   font-size:32rpx;
   color:#353535;
-  margin-bottom: 21rpx;
-  margin-top: 8rpx;
+  margin-bottom: 18rpx;
+  margin-top: 2rpx;
+  font-weight: 
 }
 .lessonDetail-item .lesson-info >.info-class{
   font-size:26rpx;
   color:#666666;
-  margin-bottom: 21rpx;
+  margin-bottom: 18rpx;
 }
 .lessonDetail-item .lesson-info >.info-time{
   font-size:26rpx;
@@ -88,12 +89,12 @@
   margin-left: 40rpx;
   margin-right: 40rpx;
   border-radius:10rpx;
-  background:#f8f8f8;
+  background:#fafafa;
   border:2rpx solid rgba(5,5,5,0.10);
   color: #000;
 }
 .lessonDetail-item .button-detailAction.active{
-  background:#E6E6E6;
+  background:#fafafa;
 }
 .lessonDetail-item .button-classplan{
 

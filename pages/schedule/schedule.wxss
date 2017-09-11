@@ -128,7 +128,7 @@
 }
 
 .schedule-filter .filter-list view.choose{
-    color: #fe6700;
+    color: #353535;
     font-weight: bold;
     background:#fafafa;
  } 
