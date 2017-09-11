@@ -9,7 +9,7 @@
 .container >view{
   text-align: center;
   font-size: 36rpx;
-  color: #ccc;
+  color: #666;
   margin-top: 100rpx;
 }
 .container>image{
