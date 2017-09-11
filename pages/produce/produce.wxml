@@ -16,13 +16,14 @@
    
       <view class="button-toSchool button-toAggregate {{active=='1'? 'active' : ''}}"
             data-type="1"
-            bindtap="toSchool">导航去项目点</view>
+            bindtap="toSchool">去项目点</view>
       <view class="button-toSchool button-toProduce {{active=='2'? 'active' : ''}}"
             data-type="2"
-            bindtap="toSchool">导航去集合点</view>
-           <view class="button-toSchool button-toAggregate {{active=='0'? 'active' : ''}}"
+            bindtap="toSchool">去集合点</view>
+           <view class="button-contactor button-toAggregate {{active=='0'? 'active' : ''}}"
             data-type="0"
-            bindtap="callContactor">联系负责人{{contactor}}</view>  
+            bindtap="callContactor">
+            联系负责人{{contactor}}</view>  
     </view>
     
   </view>

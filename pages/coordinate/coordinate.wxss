@@ -9,17 +9,17 @@
   background: rbga(53,53,53,0.04)
 }
 .coordinate-school{
-  max-height: 285rpx;
+  max-height: 335rpx;
   overflow-y: scroll;
   width: 100%;
 }
 .coordinate-school>.coordinate-school-item{
-  height: 28rpx;
-  line-height: 28rpx; 
-  padding:35rpx 0 35rpx 0;
-  margin-left: 30rpx;
+  height: 34rpx;
+  line-height: 34rpx; 
+  padding:34rpx 0 34rpx 0;
+  margin-left: 32rpx;
   margin-right: 32rpx;
-  border-bottom: 2rpx solid #ededed;
+  border-bottom: 1rpx solid #ededed;
 }
 
 .coordinate-school-item> .school{
@@ -30,7 +30,7 @@
   margin-right: 21rpx;
 }
 .coordinate-school-item> .address{
-  font-size:24rpx;
+  font-size:26rpx;
   color:#999999;
   letter-spacing:0;
   text-align:left;

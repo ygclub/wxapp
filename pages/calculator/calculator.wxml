@@ -10,6 +10,7 @@
                  id="money"
                  type="digit" 
                  bindinput="bindconfirm"
+                 style="width:480rpx"
                  placeholder="填写金额"/>
         </view>
     </view>
@@ -22,6 +23,7 @@
                  name = "allpeople"
                  type="number" 
                  bindinput="bindconfirm"
+                  style="width:480rpx"
                  placeholder="人数"/>
         </view>
     </view>
@@ -33,6 +35,7 @@
                  name ="student" 
                  type="number" 
                  bindinput="bindconfirm"
+                  style="width:480rpx"
                  placeholder="人数"/>
         </view>
     </view>

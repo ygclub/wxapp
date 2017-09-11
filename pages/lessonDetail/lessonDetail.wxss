@@ -40,18 +40,24 @@
 .lessonDetail-item .lesson-info >.info-lesson{
   font-size:32rpx;
   color:#353535;
-  margin-bottom: 18rpx;
-  margin-top: 2rpx;
-  font-weight: 
+  margin-top: 4rpx;
+  font-weight: bold;
+  letter-spacing:0;
+  text-align:left;
 }
 .lessonDetail-item .lesson-info >.info-class{
   font-size:26rpx;
   color:#666666;
-  margin-bottom: 18rpx;
+  margin-top: 8rpx;
+  letter-spacing:0;
+text-align:left;
 }
 .lessonDetail-item .lesson-info >.info-time{
   font-size:26rpx;
   color:#353535;
+  letter-spacing:0;
+text-align:left;
+margin-top: 28rpx;
 }
 .lessonDetail-item .button-detailAction{
   font-size:26rpx;
@@ -78,7 +84,8 @@
   letter-spacing:0;
   line-height:46rpx;
   text-align:justify;
-  text-justify:distribute-all-lines；
+  border:2rpx solid rgba(5,5,5,0.08);
+
 }
 .lessonDetail-item .action_bar{
   margin-bottom: 60rpx;

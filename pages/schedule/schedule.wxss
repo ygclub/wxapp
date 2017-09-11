@@ -111,7 +111,7 @@
     z-index:999;
     left:-1rpx;
     right:0rpx;
-      max-height:240px; 
+    max-height:305px; 
     overflow-y:scroll; 
   }
 
@@ -122,7 +122,7 @@
   position:absolute;
   width:20rpx;
   height:15rpx;
-  right:35rpx;
+  right:25rpx;
   top:50%;
   margin-top:-8.5rpx;
 }
@@ -201,7 +201,6 @@ color:#666666;
 letter-spacing:0;
 text-align:left;
 margin-left: 20rpx;
-margin-top:8rpx;
 
 }
 
@@ -211,7 +210,6 @@ color:#929292;
 letter-spacing:0;
 text-align:left;
 margin-left: 20rpx;
-margin-top:4rpx;
 
 }
 
@@ -223,7 +221,7 @@ color:#353535;
 letter-spacing:0;
 text-align:left;
 margin-left: 20rpx;
-margin-top: 10rpx;
+margin-top: 14rpx;
 
 }
 

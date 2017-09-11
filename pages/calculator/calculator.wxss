@@ -17,6 +17,10 @@
 .calculator .submit>button{
   margin: 20rpx 40rpx;
   border-radius:10rpx;
+  background: #f8f8f8;
+    border:2rpx solid rgba(5,5,5,0.08);
+
+
 }
 .calculator .submit>button.isCalculator{
    background:#fe6700;

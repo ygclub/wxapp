@@ -40,17 +40,18 @@
 .produce-item .school-info >.info-shcool{
   font-size:32rpx;
   color:#353535;
-  margin-bottom: 21rpx;
-  margin-top: 8rpx;
+  margin-top: 4rpx;
+  font-weight: bold;
 }
 .produce-item .school-info >.info-class{
   font-size:26rpx;
   color:#666666;
-  margin-bottom: 21rpx;
+  margin-top: 8rpx;
 }
 .produce-item .school-info >.info-time{
   font-size:26rpx;
   color:#353535;
+  margin-top: 18rpx;
 }
 .produce-item .button-toSchool{
   font-size:26rpx;
@@ -62,9 +63,28 @@
   height:94rpx;
   float: right;
 }
+
+.produce-item .button-contactor{
+  font-size:26rpx;
+  color:#457625;
+  letter-spacing:0;
+  text-align:center;
+  line-height: 94rpx;
+  width:232rpx;
+  height:94rpx;
+  float: right;
+}
+
+.produce-item .button-contactor>image{
+  width: 28rpx;
+  height: 38rpx;
+  margin-right: 4rpx;
+  margin-bottom:-8rpx;
+}
 .produce-item .button-toSchool.active{
   background:#fafafa;
 }
+
 .produce-item .button-toProduce{
 
 }

@@ -28,7 +28,8 @@
   </view>
   <view class="schedule-filter">
     <view class="schedule-filter-tab">
-        <image src="{{school_arrow}}"></image>
+        <image src="{{school_arrow}}" data-type="1"
+          bindtap="filterList"></image>
         <view wx:if="{{school_filter_touch}}">
          <text 
           data-type="1"
@@ -53,7 +54,8 @@
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
         </view>
     <view class="schedule-filter-tab">
-      <image src="{{lesson_arrow}}"></image>
+      <image src="{{lesson_arrow}}"  data-type="2"
+          bindtap="filterList"></image>
       <view wx:if="{{lesson_filter_touch}}">
       <text 
           data-type="2"
@@ -74,7 +76,8 @@
              wx:key="" class="{{item.classname}}">{{item.title}}</view>
       </view>
     <view class="schedule-filter-tab">
-      <image src="{{intelligen_arrow}}"></image>
+      <image src="{{intelligen_arrow}}"  data-type="3"
+          bindtap="filterList"></image>
         <view wx:if="{{intelligen_filter_touch}}">
       <text
          data-type="3"
