@@ -75,7 +75,7 @@ Page({
             callout: {
               content: "点我为您导航去项目点",
               borderRadius: 5,
-              bgColor: "#ffffff",
+              bgColor: "#d3d3d3",
               padding: 5,
               color:"#333333",
               fontSize: 13,
