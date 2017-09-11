@@ -126,12 +126,12 @@ Page({
           console.log(res.result.elements);
           dis = res.result.elements[0].distance;
           if(dis/1000>=1){
-            dis = (dis / 1000).toFixed(2) +"Km";
+            dis = (dis / 1000).toFixed(2) +"km";
           }else {
             dis = dis +"m";
           }
         }else{
-          dis = "大于10Km"
+          dis = "大于10ksm"
         }
        
         getArr[i].dis = dis;
