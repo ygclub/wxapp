@@ -97,7 +97,6 @@ margin-top: 28rpx;
   margin-right: 40rpx;
   border-radius:10rpx;
   background:#fafafa;
-  border:1rpx solid rgba(5,5,5,0.10);
   color: #000;
 }
 .lessonDetail-item .button-detailAction.active{
