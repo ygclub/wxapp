@@ -2,7 +2,7 @@
 <view class="container schedule">
   <view class="no-touched touche-box clearfix"
      wx:if="{{inputFalg}}"
-     bindtouchstart ="toucheInput">
+     bindtap="toucheInput">
       <view class="no-touched-input-box">
         <view class="no-touched-input">
         <image src="/image/search-icon.png"></image>
@@ -17,22 +17,21 @@
         class="search image"
         src="/image/search-icon.png"></image>
       <input placeholder="搜索" 
-          wx:if="{{!inputFalg}}"
          focus="{{!inputFalg}}"
          bindconfirm = "search_by_input"
          confirm-type="search"
          value='{{search_key=="none"?"":search_key}}'
          placeholder-class=""/>
          <view class="image delBox"
-         bindtouchstart ="delSearc">
+        bindtap="delSearc">
             <image 
             class="del"
-            bindtouchstart ="delSearc"
+            bindtap="delSearc"
             src="/image/del-icon.png"></image>
          </view>
     </view>
     <view class="input-canel fr"
-       bindtouchstart ="toucheInputCanel">取消</view>
+       bindtap="toucheInputCanel">取消</view>
   </view>
   <view class="schedule-filter">
     <view class="schedule-filter-tab">
