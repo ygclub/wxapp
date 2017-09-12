@@ -125,8 +125,8 @@
              bindtap='toClassDetail' 
              id="{{item.semester}}_{{item.school}}_{{item.course}}_{{item.class_number}}">
             <text class="className">{{item.course}}</text>
-            <text class="classCount">{{item.semester}}第{{item.class_number}}次课 {{item.teacher}}</text>
-            <text class="classAddress">{{item.school}}</text>
+            <text class="classCount">{{item.school}}第{{item.class_number}}次课 {{item.teacher}}</text>
+            <text class="classAddress">{{item.semester}}</text>
             <text class="classTime">上课时间：{{item.date}} {{item.timerange}}</text>
         </view>
     </view>
