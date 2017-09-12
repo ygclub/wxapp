@@ -7,6 +7,7 @@ var imgUp = "/image/icon-up.png";
 Page({
   data: { 
     inputFalg:true,
+    ifScroll:true,
     intelligenData:[
       {
         title:"智能排序",

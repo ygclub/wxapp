@@ -1,21 +1,24 @@
 <!--index.wxml-->
 <view class="container schedule">
-  <view class="no-touched touche-box"
+  <view class="no-touched touche-box clearfix"
      wx:if="{{inputFalg}}"
      bindtouchstart ="toucheInput">
-    <view class="no-touched-input">
+      <view class="no-touched-input-box">
+        <view class="no-touched-input">
         <image src="/image/search-icon.png"></image>
         <text>搜索</text>
     </view>
+      </view> 
   </view>
   <view class="touched touche-box clearfix"
      wx:if="{{!inputFalg}}">
-    <view class="touche-input fl">
+    <view class="touche-input fl"  wx:if="{{!inputFalg}}">
       <image 
         class="search image"
         src="/image/search-icon.png"></image>
       <input placeholder="搜索" 
          class="" 
+          wx:if="{{!inputFalg}}"
          focus="true"
          bindconfirm = "search_by_input"
          confirm-type="search"
@@ -28,7 +31,6 @@
             bindtouchstart ="delSearc"
             src="/image/del-icon.png"></image>
          </view>
-
     </view>
     <view class="input-canel fr"
        bindtouchstart ="toucheInputCanel">取消</view>
@@ -47,9 +49,9 @@
           data-type="1"
           bindtap="filterList" >{{schoolFilter.title}}</text> 
           </view>
-        <text 
+        <!-- <text 
           data-type="1"
-          bindtap="filterList">{{schoolFilter.title}}</text> 
+          bindtap="filterList">{{schoolFilter.title}}</text>  -->
       </view>
       <view class="filter-list"
             bindtap="lessonList"
@@ -102,13 +104,15 @@
          wx:if="{{intelligenFlag}}">
        <view data-index="{{item}}"
              wx:for="{{intelligenData}}"
-             wx:key="" class="{{item.classname}}">{{item.title}}</view>
+             wx:key="" 
+             class="{{item.classname}}">{{item.title}}</view>
        </view>
     </view>
   <view class="school-list school-list-schedule">
     <view class="{{bgdisplayclass}}"></view>
-    <scroll-view scroll-y="true"
-          style="height:1100rpx"
+    <scroll-view 
+          scroll-y="{{ifScroll}}"
+          style="{{ifScroll?'height:100%':'height:auto'}}"
            bindscrolltolower="lower"  
            bindscrolltoupper="upper_refresh"> 
     <view class="lesson-list clearfix" 
