@@ -5,14 +5,14 @@
        bindtouchmove="touchmove" 
        wx:for="{{items}}"
        wx:key="">
-  <view class="content school-list">
-    <view class="lesson-list clearfix">
-        <image src="../../image/after-class-icon.png"></image>
-        <view class="lesson-list-text">
-            <text class="className">语文</text>
-            <text class="classCount">2017年春季第xxx次／ji 累累</text>
-            <text class="classAddress">定福小学</text>
-            <text class="classTime">上课时间：6月23日 09:20 - 12:00</text>
+  <view class="content school-list" data-index="{{index}}" >
+    <view class="lesson-list clearfix" data-index="{{index}}" >
+        <image src="/image/after-class-icon.png" data-index="{{index}}" ></image>
+        <view class="lesson-list-text" data-index="{{index}}" >
+            <text class="className" data-index="{{index}}" >语文</text>
+            <text class="classCount" data-index="{{index}}" >2017年春季第xxx次／ji 累累</text>
+            <text class="classAddress" data-index="{{index}}" >定福小学</text>
+            <text class="classTime" data-index="{{index}}" >上课时间：6月23日 09:20 - 12:00</text>
         </view>
     </view>
   </view>
