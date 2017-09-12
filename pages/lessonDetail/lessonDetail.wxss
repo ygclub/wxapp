@@ -68,6 +68,8 @@ margin-top: 28rpx;
   width:232rpx;
   height:94rpx;
   float: right;
+  font-weight: bold;
+
 }
 
 .lessonDetail-item .plan_contain{

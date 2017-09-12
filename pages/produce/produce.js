@@ -8,7 +8,7 @@ Page({
   
   data: {
     schoolData:{},
-    active:1,
+    active:-1,
     longitude:"",
     latitude:"",
     markers: [],
@@ -85,12 +85,6 @@ Page({
         })
        
         that.mapCtx = wx.createMapContext('myMap');
-        wx.openLocation({
-          latitude: mapSchool[1]-0,
-          longitude: mapSchool[0]-0,
-          scale: 28,
-          name: options.title
-        })
       }
     })
   

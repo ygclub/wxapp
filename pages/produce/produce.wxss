@@ -24,20 +24,20 @@
 .produce-item .school  .callPhone{
 position:absolute;
 right:0;
-top:34rpx;
-font-size:28rpx;
+top:39rpx;
+font-size:26rpx;
 background:#fff;
-color: #666;
+color: #999999;
 border-top-left-radius:25rpx;
 border-bottom-left-radius:25rpx;
 box-shadow:0rpx 0rpx 5rpx 5rpx #f0f0f0 ;
 padding :6rpx 25rpx 6rpx 20rpx;
+text-align: center;
 }
 .school  .callPhone>image{
   width: 34rpx;
   height: 34rpx;
   border-radius: 50%;
-  overflow: hidden;
   margin-right:10rpx;
 
 
@@ -76,7 +76,7 @@ padding:7rpx; */
 .produce-item .school-info >.info-class{
   font-size:26rpx;
   color:#666666;
-  margin-top: 8rpx;
+  margin-top: 10rpx;
 }
 .produce-item .school-info >.info-time{
   font-size:26rpx;
@@ -92,6 +92,7 @@ padding:7rpx; */
   width:232rpx;
   height:94rpx;
   float: right;
+  font-weight: bold;
 }
 
 .produce-item .button-contactor{
