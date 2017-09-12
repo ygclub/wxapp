@@ -2,6 +2,7 @@
 //获取应用实例
 
 var app = getApp();
+var imgDown = "/image/icon-down.png"
 Page({
   data: { 
     inputFalg:true,
@@ -38,9 +39,9 @@ Page({
     school_filter_touch:false,
     lesson_filter_touch:false,
     intelligen_filter_touch:false,
-    lesson_arrow:"../../image/icon-down.png",
-    school_arrow: "../../image/icon-down.png",
-    intelligen_arrow: "../../image/icon-down.png",
+    lesson_arrow: imgDown,
+    school_arrow: imgDown,
+    intelligen_arrow: imgDown,
     bgdisplayclass: ".school-list .hidebg",
     dataType:1,
     search_key:"none",

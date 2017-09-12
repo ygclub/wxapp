@@ -21,6 +21,7 @@
          placeholder-class=""/>
          <image 
             class="del"
+            bindtouchstart ="toucheInputCanel"
             src="../../image/del-icon.png"></image>
     </view>
     <view class="input-canel fr"
