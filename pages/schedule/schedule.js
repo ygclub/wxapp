@@ -371,9 +371,6 @@ Page({
    },
    delSearc:function(e){
     console.log("删除");
-    console.log(e);
-    console.log(this.data);
-    console.log(this.data.search_key )
     this.setData({
       search_key:"none"
     })
