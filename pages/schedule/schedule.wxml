@@ -4,7 +4,7 @@
      wx:if="{{inputFalg}}"
      bindtouchstart ="toucheInput">
     <view class="no-touched-input">
-        <image src="../../image/search-icon.png"></image>
+        <image src="/image/search-icon.png"></image>
         <text>搜索</text>
     </view>
   </view>
@@ -12,17 +12,23 @@
      wx:if="{{!inputFalg}}">
     <view class="touche-input fl">
       <image 
-        class="search"
-        src="../../image/search-icon.png"></image>
+        class="search image"
+        src="/image/search-icon.png"></image>
       <input placeholder="搜索" 
          class="" 
+         focus="true"
          bindconfirm = "search_by_input"
          confirm-type="search"
+         value='{{search_key=="none"?"":search_key}}'
          placeholder-class=""/>
-         <image 
+         <view class="image delBox"
+         bindtouchstart ="delSearc">
+            <image 
             class="del"
-            bindtouchstart ="toucheInputCanel"
-            src="../../image/del-icon.png"></image>
+            bindtouchstart ="delSearc"
+            src="/image/del-icon.png"></image>
+         </view>
+
     </view>
     <view class="input-canel fr"
        bindtouchstart ="toucheInputCanel">取消</view>

@@ -19,6 +19,26 @@
   height: 177rpx;
   width: 100%;
   padding-top: 34rpx;
+  position: relative;
+}
+.produce-item .school  .callPhone{
+position:absolute;
+right:0;
+top:34rpx;
+font-size:28rpx;
+background:#fff;
+color: #666;
+border-top-left-radius:25rpx;
+border-bottom-left-radius:25rpx;
+box-shadow:0rpx 0rpx 5rpx 5rpx #f0f0f0 ;
+padding :6rpx 25rpx 6rpx 20rpx;
+}
+.school  .callPhone>image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right:10rpx;
 }
 .produce-item .button{
   height: 94rpx;

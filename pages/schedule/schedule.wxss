@@ -57,21 +57,26 @@
   left: 16rpx;
   right: 100rpx;
 }
-.touche-input >image{
+.touche-input >.image{
   position: absolute;
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
+}
+.touche-input  .image.delBox{
+    right:0;
+    width:100rpx;
 }
 .touche-input >.search{
   width:26rpx;
   height:26rpx;
   left: 16rpx;
 }
-.touche-input >.del{
+.touche-input  .del{
   width: 30rpx;
   height: 30rpx;
-  right: 21rpx;
+  float: right;
+  margin-right: 10rpx;
 }
 .touche-input >input{
   background:#ffffff;

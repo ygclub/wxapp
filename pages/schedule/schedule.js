@@ -2,7 +2,8 @@
 //获取应用实例
 
 var app = getApp();
-var imgDown = "/image/icon-down.png"
+var imgDown = "/image/icon-down.png";
+var imgUp = "/image/icon-up.png";
 Page({
   data: { 
     inputFalg:true,
@@ -45,7 +46,6 @@ Page({
     bgdisplayclass: ".school-list .hidebg",
     dataType:1,
     search_key:"none",
-    
   },
   //事件处理函数
   onShow: function () {
@@ -93,9 +93,9 @@ Page({
       schoolFilter: {title:"全部项目点",id:0},
       lessonFilter: {title:"全部课程",id:0},
       intelligenFilter: this.data.intelligenData[0],
-      lesson_arrow: "../../image/icon-down.png",
-      school_arrow: "../../image/icon-down.png",
-      intelligen_arrow: "../../image/icon-down.png"
+      lesson_arrow: imgDown,
+      school_arrow: imgDown,
+      intelligen_arrow: imgDown
     })
 
     //query schedule  by default
@@ -155,9 +155,9 @@ Page({
             schoolFlag: false,
             school_filter_touch: false,
             bgdisplayclass: "hidebg",
-            lesson_arrow: "../../image/icon-down.png",
-            school_arrow: "../../image/icon-down.png",
-            intelligen_arrow: "../../image/icon-down.png",
+            lesson_arrow: imgDown,
+            school_arrow: imgDown,
+            intelligen_arrow: imgDown,
           })
           return;
         }
@@ -183,9 +183,9 @@ Page({
           lesson_filter_touch: false,
           intelligen_filter_touch: false,
           bgdisplayclass: "displaybg",
-          lesson_arrow: "../../image/icon-down.png",
-          school_arrow: "../../image/icon-up.png",
-          intelligen_arrow: "../../image/icon-down.png",
+          lesson_arrow: imgDown,
+          school_arrow: imgUp,
+          intelligen_arrow: imgDown,
           schoolData:itemDatas,
           dataType:1
         })
@@ -196,9 +196,9 @@ Page({
             lessonFlag: false,
             lesson_filter_touch: false,
             bgdisplayclass: "hidebg",
-            lesson_arrow: "../../image/icon-down.png",
-            school_arrow: "../../image/icon-down.png",
-            intelligen_arrow: "../../image/icon-down.png",
+            lesson_arrow: imgDown,
+            school_arrow: imgDown,
+            intelligen_arrow: imgDown,
           })
           return;
         }
@@ -223,9 +223,9 @@ Page({
           lesson_filter_touch: true,
           intelligen_filter_touch: false,
           bgdisplayclass: "displaybg",
-          lesson_arrow: "../../image/icon-up.png",
-          school_arrow: "../../image/icon-down.png",
-          intelligen_arrow: "../../image/icon-down.png",
+          lesson_arrow: imgUp,
+          school_arrow: imgDown,
+          intelligen_arrow: imgDown,
           lessonData:itemDatas,
           dataType:2
         })
@@ -236,9 +236,9 @@ Page({
             intelligenFlag: false,
             intelligen_filter_touch: false,
             bgdisplayclass: "hidebg",
-            lesson_arrow: "../../image/icon-down.png",
-            school_arrow: "../../image/icon-down.png",
-            intelligen_arrow: "../../image/icon-down.png",
+            lesson_arrow: imgDown,
+            school_arrow: imgDown,
+            intelligen_arrow: imgDown,
           })
           return;
         }
@@ -263,9 +263,9 @@ Page({
           lesson_filter_touch: false,
           intelligen_filter_touch: true,
           bgdisplayclass: "displaybg",
-          lesson_arrow: "../../image/icon-down.png",
-          school_arrow: "../../image/icon-down.png",
-          intelligen_arrow: "../../image/icon-up.png",
+          lesson_arrow: imgDown,
+          school_arrow: imgDown,
+          intelligen_arrow: imgUp,
           intelligenData:itemDatas,
           dataType:3
         })
@@ -303,9 +303,9 @@ Page({
        lesson_filter_touch: false,
        intelligen_filter_touch: false,
        bgdisplayclass: "hidebg",
-       lesson_arrow: "../../image/icon-down.png",
-       school_arrow: "../../image/icon-down.png",
-       intelligen_arrow: "../../image/icon-down.png",
+       lesson_arrow: imgDown,
+       school_arrow: imgDown,
+       intelligen_arrow: imgDown,
      })
    },
    toucheInput:function(){
@@ -368,6 +368,15 @@ Page({
          });
        }
      })
+   },
+   delSearc:function(e){
+    console.log("删除");
+    console.log(e);
+    console.log(this.data);
+    console.log(this.data.search_key )
+    this.setData({
+      search_key:"none"
+    })
    }
 })
 // function json2Form(json) {

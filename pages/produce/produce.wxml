@@ -3,6 +3,12 @@
 <view class="produce">
   <view class="produce-item">
     <view class="school clearfix">
+      <view class="callPhone clearfix" 
+            data-type="0"
+            bindtap="callContactor">
+            <image src="/image/phone.png" class="fl"></image>
+            <text class="fl">负责人{{contactor}}</text>
+      </view>
       <view class="school-image fl">
         <image src="{{schoolData.image}}"></image>
       </view>
@@ -12,21 +18,21 @@
         <view class="info-time">{{schoolData.class_weekday}} {{schoolData.class_time}} 上课</view>
       </view>
     </view>
+
     <view class="button clearfix">
-   
       <view class="button-toSchool button-toAggregate {{active=='1'? 'active' : ''}}"
             data-type="1"
             bindtap="toSchool">去项目点</view>
       <view class="button-toSchool button-toProduce {{active=='2'? 'active' : ''}}"
             data-type="2"
             bindtap="toSchool">去集合点</view>
-           <view class="button-contactor button-toAggregate {{active=='0'? 'active' : ''}}"
+           <!-- <view class="button-contactor button-toAggregate {{active=='0'? 'active' : ''}}"
             data-type="0"
             bindtap="callContactor">
-            联系负责人{{contactor}}</view>  
+            联系负责人{{contactor}}</view>   -->
     </view>
-    
   </view>
+
   <map id="map" 
        scale="11"
        longitude="{{longitude}}"
