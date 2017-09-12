@@ -12,14 +12,13 @@
   </view>
   <view class="touched touche-box clearfix"
      wx:if="{{!inputFalg}}">
-    <view class="touche-input fl"  wx:if="{{!inputFalg}}">
+    <view class="touche-input fl" >
       <image 
         class="search image"
         src="/image/search-icon.png"></image>
       <input placeholder="搜索" 
-         class="" 
           wx:if="{{!inputFalg}}"
-         focus="true"
+         focus="{{!inputFalg}}"
          bindconfirm = "search_by_input"
          confirm-type="search"
          value='{{search_key=="none"?"":search_key}}'
