@@ -21,7 +21,7 @@
             data-type="2"
             bindtap="showClassPlan">课程提纲</view>  
     </view>
-    <scroll-view class="plan_contain">
+    <scroll-view class="plan_contain" scroll-y="true">
   <rich-text class="plan" nodes="{{lesson.plan.content}}"></rich-text>
   </scroll-view>
   <view class="action_bar">
