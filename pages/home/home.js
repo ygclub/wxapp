@@ -122,6 +122,7 @@ Page({
         for(var i = 0; i < newsArray.length; i++){
           var content = newsArray[i].content;
           var newType = newsArray[i].type;
+          console.log("content:"+content)
           var item = { url: "#", news: content, newType: newType};
           newRes.push(item);
        }
