@@ -19,9 +19,12 @@
         <view class="border-bottom"></view>
         <view class="list">
              <text class="title fl">课程</text>
-            <input placeholder='红学经典'  
-            placeholder-class="creat-info-input"
-                          class="fl"></input>
+              <picker bindchange="bindPickerClassChange"
+              value="{{classIIndex}}" 
+              range="{{classArray}}">
+            <view class="creat-info-input">
+              {{classArray[classIndex]}}</view>
+              </picker>
                       <image 
                class="fr"
       src="/image/icon-right.png"></image>
@@ -30,9 +33,12 @@
         <view class="item creat-info">
         <view class="list">
             <text class="title fl">学期</text>
-            <input placeholder='红学经典'  
-            placeholder-class="creat-info-input"
-                          class="fl"></input>
+                  <picker bindchange="bindPickerLessionChange"
+              value="{{lessionIndex}}" 
+              range="{{lessionArray}}">
+            <view class="creat-info-input">
+              {{lessionArray[lessionIndex]}}</view>
+              </picker>
             <image 
                class="fr"
       src="/image/icon-right.png"></image>
@@ -40,9 +46,12 @@
         <view class="border-bottom"></view>
         <view class="list">
              <text class="title fl">课次</text>
-            <input placeholder='红学经典'  
-            placeholder-class="creat-info-input"
-                          class="fl"></input>
+                       <picker bindchange="bindPickerFrequencyChange"
+              value="{{frequencyIndex}}" 
+              range="{{frequencyArray}}">
+            <view class="creat-info-input">
+              {{frequencyArray[frequencyIndex]}}</view>
+              </picker>
                       <image 
                class="fr"
       src="/image/icon-right.png"></image>
@@ -51,10 +60,13 @@
     <view class="item creat-info">
         <view class="list">
             <text class="title fl">学校</text>
-            <input placeholder='红学经典'  
-                          placeholder-class="creat-info-input"
-                          class="fl"></input>
-                      <image 
+              <picker bindchange="bindPickerSchoolChange"
+              value="{{schoolIndex}}" 
+              range="{{schoolArray}}">
+            <view class="creat-info-input">
+              {{schoolArray[schoolIndex]}}</view>
+              </picker>
+             <image 
                class="fr"
       src="/image/icon-right.png"></image>
         </view>
