@@ -2,4 +2,5 @@
 <view class="container">
       <view>暂时还没有上传课后十分钟的活动</view>
       <image src='/def-img/xboy.png'></image>
+      <view class="add" bindtap='toCreat'>+</view>
 </view>

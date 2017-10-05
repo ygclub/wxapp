@@ -1,0 +1,95 @@
+/* pages/creatClass/creatClass.wxss */
+
+.content{
+    background: #f7f7f7;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.content .item{
+  margin-bottom: 20rpx
+}
+.content  .creat-host {
+   height: 90rpx;
+   padding: 30rpx 40rpx ;
+   background: #fff;
+}
+.content  .creat-host > image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 29rpx;
+}
+.creat-host   .creat-host-info {
+  margin-top: 10rpx;
+}
+.creat-host  .creat-host-info >text{
+  display: block;
+}
+.content  .creat-host  .creat-host-name{
+  font-size:32rpx;
+  color:#353535;
+  letter-spacing:0;
+  text-align:left;
+}
+.content  .creat-host  .creat-host-time{
+  font-size:26rpx;
+  color:#666666;
+  letter-spacing:0;
+  text-align:left;
+}
+.content .creat-info{
+    background: #fff
+}
+.content .creat-info .list{
+    height: 40rpx;
+    padding: 30rpx  24rpx;
+    position: relative;
+}
+
+.content .creat-info .border-bottom{
+  border-bottom: 1rpx solid #f7f7f7;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.creat-info .list>.title{
+   margin-right: 70rpx;
+}
+.creat-info .list>image{
+    width:16rpx;
+    height:26rpx;
+    position: absolute;
+    top: 50%;
+    right: 24rpx;
+    margin-top: -13rpx;
+}
+
+.creat-bottom{
+  position:fixed;
+  bottom:0;
+  background:#fff;
+  left:0;
+  right:0;
+  padding: 20rpx 40rpx;
+}
+.creat-bottom .creat-button{
+  background:#f8f8f8;
+  border:2rpx solid rgba(5,5,5,0.10);
+  border-radius:10rpx;
+  height:90rpx;
+  width: 100%;
+  line-height: 90rpx;
+  text-align: center;
+}
+.creat-bottom .creat-button.active{
+  background:#fe6700;
+  border:2px solid rgba(5,5,5,0.08);
+  color: #fff;
+}
+.creat-info-input{
+  font-size:30rpx;
+  color:#353535;
+  letter-spacing:0;
+}

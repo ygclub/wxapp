@@ -21,3 +21,16 @@
   border-radius: 50%;
   opacity: 0.8;
 }
+.container .add{
+  background:#fe6700;
+  width:86rpx;
+  height:86rpx;
+  bottom: 62rpx;
+  right: 64rpx;
+  border-radius:50%;
+  position: fixed;
+  color: #fff;
+  text-align: center;
+  line-height: 86rpx;
+  font-size: 30rpx;
+}

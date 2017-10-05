@@ -1,0 +1,116 @@
+<view class = "content">
+  <view class="title clearfix mb">
+      <image src="/def-img/xboy.png" class="fl"></image>
+      <view class="fl title-box">
+          <text class="title-title">国学经典</text>
+          <text class= "title-content">2017年春季计算机第9次课程</text>
+      </view>
+  </view>
+   <view class="speak-user clearfix mb">
+        <view class="fl speak-user-host clearfix">
+               <image src="/def-img/xboy.png" class="fl"></image>
+              <view class="fl speak-user-host-info">
+                <text class="user-name">主讲人：啊实打</text>
+                  <text class="user-content">正在讲话...</text>
+             </view> 
+
+      </view>
+      <view class="fr speak-user-other"
+            bindtap="toPeople">
+            <view class="speal-users-box clearfix">
+                <view class="speal-users-box-head clearfix fl">
+                      <image src="/def-img/xboy.png"></image> 
+                       <image src="/def-img/xboy.png"></image> 
+                        <image src="/def-img/xboy.png"></image> 
+                </view>
+                <image class="fr speal-users-box-head-more" 
+                src="/image/icon-right.png"></image>
+            </view>
+            <view class="speal-users-box-text">（右上角分享邀请小伙伴加入）</view>
+      </view>
+  </view> 
+  <view class="speak-main">
+      <view class="speak-main-title">总结内容</view>
+      <view class="speak-line"></view>
+      <view class="speak-main-content clearfix">
+            <view class="speak-content clearfix s-left">
+                  <image src="/def-img/xboy.png" class="fl"></image>
+                  <view class="speark-content-box">
+                      <view class="speak-content-title">xxxx</view>
+                      <text class ="speak-content-port"></text>
+                      <view class="speak-content-text">asdasdasdadsasdadasdadadas
+                      dasd asdasdasd asd adas dad asd ad ad  </view>
+                  </view>
+            </view>
+             <view class="speak-content clearfix s-right">
+                  <view class="speark-content-box">
+                      <view class="speak-content-title">xxxx</view>
+                      <text class ="speak-content-port"></text>
+                      <view class="speak-content-text">asdasdasdadsasdadasdadadas
+                      dasd asdasdasd asd adas dad asd ad ad  </view>
+                  </view>
+                    <image src="/def-img/xboy.png" class="fl"></image>
+            </view>
+               <view class="speak-content clearfix s-right">
+                  <view class="speark-content-box">
+                      <view class="speak-content-title">xxxx</view>
+                      <text class ="speak-content-port"></text>
+                      <view class="speak-content-text">asdasdasdadsasdadasdadadas
+                      dasd asdasdasd asd adas dad asd ad ad  </view>
+                  </view>
+                    <image src="/def-img/xboy.png" class="fl"></image>
+            </view>
+               <view class="speak-content clearfix s-right">
+                  <view class="speark-content-box">
+                      <view class="speak-content-title">xxxx</view>
+                      <text class ="speak-content-port"></text>
+                      <view class="speak-content-text">asdasdasdadsasdadasdadadas
+                      dasd asdasdasd asd adas dad asd ad ad  </view>
+                  </view>
+                    <image src="/def-img/xboy.png" class="fl"></image>
+            </view>
+             <view class="speak-content clearfix s-left">
+                  <image src="/def-img/xboy.png" class="fl"></image>
+                  <view class="speark-content-box">
+                      <view class="speak-content-title">xxxx</view>
+                      <text class ="speak-content-port"></text>
+                      <view class="speak-content-text">asdasdasdadsasdadasdadadas
+                      dasd
+                      asd
+                      asd
+                      as
+                      dass
+                      das
+                      d
+                      ad
+                      asad</view>
+                  </view>
+            </view>
+             <view class="speak-content clearfix">
+                  <image src="/def-img/xboy.png" class="fl"></image>
+                  <view class="speark-content-box">
+                      <view class="speak-content-title">xxxx</view>
+                      <text class ="speak-content-port"></text>
+                      <view class="speak-content-text">asdasdasdadsasdadasdadadas
+                      dasd
+                      asd
+                      asd
+                      as
+                      dass
+                      das
+                      d
+                      ad
+                      asad</view>
+                  </view>
+            </view>
+      
+      </view>
+  </view>
+  <view class="speak clearfix">
+      <view class="speak-button fl">按住说话</view>
+      <view class="speak-over fr">结束说话</view>
+  </view>
+</view>
+
+ 
+   
