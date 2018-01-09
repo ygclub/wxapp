@@ -27,7 +27,7 @@ Page({
         toPage: "3"
       }, {
         image: "/image/after-class-icon.png",
-        title: "课后十分钟",
+        title: "阳光公益报告",
         toPage: "0"
       }
     ]
@@ -50,7 +50,8 @@ Page({
     switch (parseInt(e.target.dataset.tab)) {
       case 0: 
         wx.navigateTo({
-          url: '/pages/afterClass/afterClass'
+         // url: '/pages/afterClass/afterClass'
+            url: '/pages/ygReport/ygReport'
         })
        break;
       case 1:

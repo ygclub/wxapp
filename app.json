@@ -1,7 +1,7 @@
 {
   "pages": [
-        "pages/home/home",
-      "pages/classPeople/classPeople",
+    "pages/home/home",
+    "pages/classPeople/classPeople",
     "pages/mainHost/mainHost",
     "pages/creatClass/creatClass",
     "pages/afterClass/afterClass",
@@ -15,7 +15,8 @@
     "pages/calculator/calculator",
     "pages/about/about",
     "pages/author/author",
-    "pages/lessonDetail/lessonDetail"
+    "pages/lessonDetail/lessonDetail",
+    "pages/ygReport/ygReport"
   ],
   "window": {
     "backgroundTextStyle": "light",

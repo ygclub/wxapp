@@ -1,0 +1,2 @@
+<!--pages/ygReport/ygReport.wxml-->
+<web-view src="https://squirrelrao.com/ygShare/share.html"></web-view>
