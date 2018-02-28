@@ -1,1 +1,5 @@
-{}
+{
+    "usingComponents": {
+      "custom-service": "/component/custom-service/custom-service"
+    }
+}

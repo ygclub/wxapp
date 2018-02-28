@@ -1,0 +1,33 @@
+.custom-box{
+  width: 60rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5rpx;
+  box-shadow:0 5px 13px 0 rgba(0,0,0,0.04);
+}
+ .custom-box button{
+  width: 100%;
+  height: 100%;
+   border-radius: 50%;
+   border: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+} 
+.custom-box .custom-image{
+  height: 100%;
+   border:2rpx solid #477926; 
+  border-radius: 50%;
+  width: 100%;
+  padding: 5rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.custom-box image{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}

@@ -92,3 +92,9 @@ concontent .content{
   line-height:28rpx;
   text-align:center;
 }
+ .custom{
+  position: fixed;
+ top: 20rpx;
+ right: 20rpx;
+  z-index: 9999;
+} 

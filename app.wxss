@@ -73,3 +73,9 @@
   font-size:22rpx;
   color:#353535;
 }
+.connent-us{
+  position: fixed;
+  width: 30rpx;
+  height: 30rpx;
+  background: #000;
+}

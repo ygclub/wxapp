@@ -41,4 +41,6 @@
     </view>
   </view>
 </view>
+<custom-service class="custom"></custom-service>
+
  

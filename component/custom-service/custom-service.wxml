@@ -1,0 +1,6 @@
+<view class="custom-box">
+  <view class="custom-image">
+      <image src = "/image/custom-service.png"></image>
+  </view>
+   <button open-type ="contact"></button> 
+</view>
