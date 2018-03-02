@@ -90,7 +90,7 @@ Page({
     }
     return {
       title: '阳光小程序',
-      path: '/pages/lessonDetail/lessonDetail',
+      path: '/pages/lessonDetail/lessonDetail?id=' + this.data.classId,
       success: function (res) {
         // 转发成功
         console.log(res);

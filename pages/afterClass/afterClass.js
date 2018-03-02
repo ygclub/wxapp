@@ -11,5 +11,11 @@ Page({
   onLoad: function () {
     var that = this
 
+  },
+
+  toCreat:function(){
+    wx.navigateTo({
+      url: '/pages/creatClass/creatClass'
+    })
   }
 })

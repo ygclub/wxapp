@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/classPeople/classPeople",
+    "pages/mainHost/mainHost",
+    "pages/creatClass/creatClass",
+    "pages/afterClass/afterClass",
     "pages/coordinate/coordinate",
     "pages/produce/produce",
     "pages/schedule/schedule",
@@ -9,11 +13,11 @@
     "pages/lessonList/lession",
     "pages/index/index",
     "pages/calculator/calculator",
-    "pages/afterClass/afterClass",
     "pages/about/about",
     "pages/author/author",
     "pages/lessonDetail/lessonDetail",
-    "pages/custom/custom"
+    "pages/custom/custom",
+    "pages/ygReport/ygReport"
   ],
   "window": {
     "backgroundTextStyle": "light",

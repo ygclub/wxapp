@@ -1,0 +1,42 @@
+/* pages/classPeople/classPeople.wxss */
+.content{
+  padding:41rpx 50rpx;
+}
+
+.people-list {
+  max-width: 630rpx;
+  margin: 0 auto;
+}
+.people-list .people-item{
+    width: 90rpx;
+    float: left;
+     margin-right:45rpx;
+    margin-bottom: 44rpx;
+}
+.people-list .people-item:nth-child(5n){
+  margin-right: 0;
+}
+
+.people-list .people-item >image{
+   background:#d8d8d8;
+  width:90rpx;
+  height:90rpx;
+  border-radius:50%;
+  overflow: hidden;
+}
+.people-list .people-item >.people-name{
+  font-size:22rpx;
+color:#353535;
+text-align:center;
+display: block;
+}
+.Introduction-class{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  font-size:26rpx;
+color:#457625;
+text-align:center;
+line-height: 65rpx;
+}

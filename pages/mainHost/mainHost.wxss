@@ -1,0 +1,209 @@
+/* pages/mainHost/mainHost.wxss */
+.content{
+  background: #f7f7f7;
+  position: fixed;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+}
+.content >.title{
+  height: 137rpx;
+  padding: 40rpx 30rpx;
+  background: #fff;
+}
+.content  .title-box>text {
+  display: block;
+}
+.title-box  .title-title{
+  font-size:32rpx;
+ color:#353535;
+}
+.title-box  .title-content{
+    font-size:26rpx;
+     color:#666666;
+}
+.speak-user{
+  height: 102rpx;
+  padding: 35rpx  30rpx;
+  background: #fff;
+}
+.content  .title > image{
+  width: 113rpx;
+  height: 127rpx;
+  border-radius: 6rpx;
+  margin-right: 40rpx;
+}
+.speak-user-host >image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 18rpx;
+}
+.speak-user-host-info>text{
+  display: block;
+}
+.speak-user-host  .user-name {
+  font-size:26rpx;
+ color:#353535;
+}
+.speak-user-host .user-content{
+  font-size:22rpx;
+color:#888888;
+}
+.speal-users-box{
+  position: relative;
+  margin-right: 30rpx;
+}
+.speal-users-box-head{
+  margin-right: 30rpx;
+  margin-bottom: 10rpx;
+}
+.speal-users-box-head-more{
+    width:16rpx;
+    height:26rpx;
+    position: absolute;
+    top: 50%;
+    right: 0rpx;
+    margin-top: -13rpx;
+}
+
+.speal-users-box-head > image{
+  float:  right;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+.speal-users-box-text{
+  font-size:18rpx;
+color:#888888;
+text-align: center;
+}
+.speak-main {
+      padding: 40rpx  30rpx; 
+      background: #fff;
+      position: relative;
+}
+.speak-main  .speak-main-title{
+  font-size:26rpx;
+  color:#353535;
+  height: 57rpx;
+}
+.speak-main .speak-line{
+  height: 1rpx;
+  background: #f7f7f7;
+}
+.speak-main .speak-main-content{
+     padding-top: 41rpx;
+}
+
+
+
+.speak-content >image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+.speak-content{
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.speak-content .speak-content-title{
+font-size:18rpx;
+color:#666666;
+letter-spacing:0;
+line-height:16rpx;
+margin-bottom: 11rpx;
+}
+.speak-content .speak-content-text{
+  border:1rpx solid #f7f7f7;
+border-radius:4rpx;
+padding: 16rpx;
+font-size:30rpx;
+color:#526546;
+letter-spacing:0;
+line-height:50rpx;
+position: relative
+}
+.speak-content-box{
+  position: relative;
+}
+.speak-content .speak-content-port{
+position:absolute;
+top:40rpx;
+width:30rpx;
+height:30rpx;
+display:block;
+border-radius:10rpx;
+transform:rotate(45deg);
+}
+
+.speak-content.s-left{
+  padding-left: 72rpx;
+}
+.speak-content.s-right{
+  padding-right: 72rpx;
+}
+.speak-content.s-left .speak-content-title{
+  text-align: left;
+}
+.speak-content.s-right .speak-content-title{
+  text-align: right;
+}
+.speak-content.s-left .speak-content-text{
+    background:#edfae5;
+}
+.speak-content.s-right .speak-content-text{
+    background:#f8f8f8;
+}
+
+.speak-content.s-left>image{
+    left: 0;
+      margin-right: 16rpx;
+}
+.speak-content.s-left .speak-content-port{
+  left:65rpx;
+    background:#edfae5;
+}
+.speak-content.s-right>image{
+  right: 0;
+  margin-left: 16rpx;
+}
+.speak-content.s-right .speak-content-port{
+  right:65rpx;
+   background:#f8f8f8;
+}
+
+.speak{
+  position: fixed;
+  background:#ffffff;
+ box-shadow:0 -1px 0 0 rgba(0,0,0,0.10);
+ left: 0;
+right: 0;
+bottom: 0;
+height:94rpx;
+padding: 20rpx  34rpx 20rpx 20rpx;
+line-height: 90rpx;
+}
+.speak  .speak-button {
+    background:#fe6700;
+   border:2px solid rgba(5,5,5,0.08);
+   border-radius:10px; 
+   width:70%;
+   height:90rpx;
+    text-align: center;
+     color: #fff;
+}
+.speak .speak-over{
+font-size:30rpx;
+color:#666666;
+letter-spacing:0;
+text-align:left;
+width: 20%
+}
+.content .mb{
+  margin-bottom: 20rpx;
+}

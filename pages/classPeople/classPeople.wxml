@@ -1,0 +1,40 @@
+<view class="content">
+      <view class="people-list clearfix">
+            <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+              <view class="people-item">
+                  <image src="/def-img/90_icon.png"></image>
+                  <text class="people-name">1231231</text>
+            </view>
+      
+      </view>
+</view>
+<view class="Introduction-class">
+    推出课程
+</view>

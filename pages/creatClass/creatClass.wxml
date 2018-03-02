@@ -1,0 +1,80 @@
+<view class="content">
+    <view class="creat-host clearfix item">
+        <image src="/def-img/xboy.png" class="fl"></image>
+        <view class="creat-host-info fl">
+            <text class="creat-host-name">  主讲人：李雷雷</text>
+            <text class="creat-host-time">2013/3/34/课时50分钟</text>
+        </view>
+    </view>
+    <view class="item creat-info">
+        <view class="list">
+            <text class="title fl">主题</text>
+            <input placeholder='红学经典'  
+            placeholder-class="creat-info-input"
+                          class="fl"></input>
+                      <image 
+               class="fr"
+      src="/image/icon-right.png"></image>
+        </view>
+        <view class="border-bottom"></view>
+        <view class="list">
+             <text class="title fl">课程</text>
+              <picker bindchange="bindPickerClassChange"
+              value="{{classIIndex}}" 
+              range="{{classArray}}">
+            <view class="creat-info-input">
+              {{classArray[classIndex]}}</view>
+              </picker>
+                      <image 
+               class="fr"
+      src="/image/icon-right.png"></image>
+          </view>
+    </view>
+        <view class="item creat-info">
+        <view class="list">
+            <text class="title fl">学期</text>
+                  <picker bindchange="bindPickerLessionChange"
+              value="{{lessionIndex}}" 
+              range="{{lessionArray}}">
+            <view class="creat-info-input">
+              {{lessionArray[lessionIndex]}}</view>
+              </picker>
+            <image 
+               class="fr"
+      src="/image/icon-right.png"></image>
+        </view>
+        <view class="border-bottom"></view>
+        <view class="list">
+             <text class="title fl">课次</text>
+                       <picker bindchange="bindPickerFrequencyChange"
+              value="{{frequencyIndex}}" 
+              range="{{frequencyArray}}">
+            <view class="creat-info-input">
+              {{frequencyArray[frequencyIndex]}}</view>
+              </picker>
+                      <image 
+               class="fr"
+      src="/image/icon-right.png"></image>
+          </view>
+    </view>
+    <view class="item creat-info">
+        <view class="list">
+            <text class="title fl">学校</text>
+              <picker bindchange="bindPickerSchoolChange"
+              value="{{schoolIndex}}" 
+              range="{{schoolArray}}">
+            <view class="creat-info-input">
+              {{schoolArray[schoolIndex]}}</view>
+              </picker>
+             <image 
+               class="fr"
+      src="/image/icon-right.png"></image>
+        </view>
+    </view>
+
+
+    <view class="creat-bottom">
+        <view class="creat-button active"
+        bindtap='toHost'>创建</view>
+    </view>
+</view>
