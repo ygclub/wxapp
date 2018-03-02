@@ -12,7 +12,8 @@
     "pages/afterClass/afterClass",
     "pages/about/about",
     "pages/author/author",
-    "pages/lessonDetail/lessonDetail"
+    "pages/lessonDetail/lessonDetail",
+    "pages/custom/custom"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,14 +28,14 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "iconPath": "image/home-tab.png",
-        "selectedIconPath": "image/home-tab-active.png",
+        "iconPath": "/image/home-tab.png",
+        "selectedIconPath": "/image/home-tab-active.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/logs/logs",
-        "iconPath": "image/my-tab.png",
-        "selectedIconPath": "image/my-tab-active.png",
+        "iconPath": "/image/my-tab.png",
+        "selectedIconPath": "/image/my-tab-active.png",
         "text": "我的"
       }
     ]

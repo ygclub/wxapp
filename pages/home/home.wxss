@@ -97,4 +97,5 @@ concontent .content{
  top: 20rpx;
  right: 20rpx;
   z-index: 9999;
+  top:350rpx;
 } 
