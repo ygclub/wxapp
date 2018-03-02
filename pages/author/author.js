@@ -32,7 +32,7 @@ Page({
     versionData: [
       {
         code: "1.0.4",
-        time: "2018年1月11日",
+        time: "2018年1月12日",
         content: "阳光公益报告上线"
       },
       {
